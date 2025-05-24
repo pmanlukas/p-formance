@@ -16,6 +16,7 @@
         - Pure White (Backgrounds, Contrast Text): #FFFFFF
         - Light Grey (Borders, Subtle Backgrounds): #F3F4F6 (Tailwind gray-100)
         - Medium Grey (Subtle Text): #6B7280 (Tailwind gray-500)
+        - Chart Accent Grey: #E0E0E0
     -->
     <style>
         body {
@@ -59,11 +60,11 @@
         }
         .pillar-image {
             width: 100%;
-            height: 160px; /* Adjust height as needed */
-            object-fit: cover; /* Ensures image covers the area, might crop */
-            border-top-left-radius: 0.5rem; /* Tailwind rounded-t-lg */
-            border-top-right-radius: 0.5rem; /* Tailwind rounded-t-lg */
-            margin-bottom: 1rem; /* Tailwind mb-4 */
+            height: 160px; 
+            object-fit: cover; 
+            border-top-left-radius: 0.5rem; 
+            border-top-right-radius: 0.5rem; 
+            margin-bottom: 1rem; 
         }
         .advantage-icon-bullet { 
              background-color: #FF6F00; 
@@ -80,10 +81,49 @@
              margin-right: 1rem; 
         }
         .science-icon {
-            font-size: 2rem; /* Tailwind text-3xl */
+            font-size: 2rem; 
             color: #FF6F00;
-            margin-right: 0.5rem; /* Tailwind mr-2 */
-            line-height: 1; /* Ensure icon vertical alignment */
+            margin-right: 0.5rem; 
+            line-height: 1; 
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 300px; /* Max width for donut chart in card */
+            height: 200px;   /* Fixed height for donut chart */
+            margin: 1rem auto 0 auto; /* mb-4 auto 0 auto */
+        }
+        .bar-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px; /* Max width for bar chart */
+            height: 300px;   /* Fixed height for bar chart */
+            margin: 1.5rem auto; /* my-6 auto */
+        }
+        /* Flowchart Styles */
+        .flowchart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem; /* Tailwind gap-2 */
+        }
+        .flowchart-step {
+            background-color: #F3F4F6; /* Tailwind gray-100 */
+            border: 2px solid #FF6F00; /* P-Formance Orange */
+            color: #1A1A1A; /* Carbon Black */
+            padding: 0.75rem 1.25rem; /* Tailwind p-3 px-5 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            text-align: center;
+            font-size: 0.875rem; /* Tailwind text-sm */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+            width: 80%;
+            max-width: 350px;
+        }
+        .flowchart-arrow {
+            color: #FF6F00; /* P-Formance Orange */
+            font-size: 2rem; /* Tailwind text-3xl */
+            line-height: 1;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -131,12 +171,14 @@
                     </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <div class="text-5xl text-[#FF6F00] mb-4">😟</div>
+                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">The GI Distress Barrier</h3>
-                        <p class="text-gray-600">
-                           Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel. Fructose is a key offender due to its limited absorption.
+                        <p class="text-gray-600 text-sm mb-2">
+                           Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel. Fructose is a key offender.
                         </p>
+                        <div class="chart-container mt-auto"> 
+                            <canvas id="giDistressChart"></canvas>
+                        </div>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
                         <div class="text-5xl text-[#FF6F00] mb-4">🧪</div>
@@ -161,9 +203,33 @@
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
                     <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Our approach is built on a deep understanding of carbohydrate metabolism and the challenges athletes face. Key scientific insights shape our fructose-free strategy:
+                        Our approach is built on a deep understanding of carbohydrate metabolism. Key scientific insights shape our fructose-free strategy:
                     </p>
                 </div>
+
+                <div class="bar-chart-container mb-12"> 
+                    <canvas id="absorptionPathwaysChart"></canvas>
+                </div>
+
+                <div class="mb-12 md:mb-16">
+                    <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">How P-Formance Works: The SGLT1 Pathway for Glucose/Maltodextrin</h3>
+                    <div class="flowchart-container">
+                        <div class="flowchart-step"><strong>1. Ingestion:</strong> P-Formance fuel (Glucose/Maltodextrin based) is consumed.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-step"><strong>2. Intestinal Lumen:</strong> Glucose molecules (from direct glucose or broken-down maltodextrin) arrive in the small intestine.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-step"><strong>3. SGLT1 Transporter Activation:</strong> Glucose binds to the SGLT1 transporter on intestinal cells. This is an active process, co-transporting sodium.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-step"><strong>4. Efficient Absorption:</strong> Glucose is transported into the intestinal cell. SGLT1 has a high capacity (~60-70g/hr).</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-step"><strong>5. Enters Bloodstream:</strong> Glucose exits the intestinal cell and enters the bloodstream directly.</div>
+                        <div class="flowchart-arrow">↓</div>
+                        <div class="flowchart-step"><strong>6. Fuel for Muscles:</strong> Circulating glucose is readily available for uptake by working muscles for energy.</div>
+                    </div>
+                    <p class="text-center text-sm text-gray-600 mt-4">P-Formance optimizes this pathway for efficient, gut-friendly energy delivery, completely avoiding the complexities and potential GI issues of fructose absorption via GLUT5.</p>
+                </div>
+
+
                 <div class="grid md:grid-cols-2 gap-8 items-start">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⚠️</span>Fructose & GI Distress Link</h3>
@@ -172,21 +238,15 @@
                         </p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⇆</span>Carbohydrate Absorption Pathways</h3>
-                        <p class="text-gray-600 text-sm">
-                            Glucose/maltodextrin are absorbed via the robust SGLT1 transporter (~60-70 g/hr). Fructose relies on the lower-capacity GLUT5 transporter (~30 g/hr alone). P-Formance focuses on optimizing the SGLT1 pathway.
-                        </p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔗</span>Understanding MTC Strategies</h3>
                         <p class="text-gray-600 text-sm">
                             Multiple Transportable Carbohydrate (MTC) formulas (glucose+fructose) aim to maximize CHO uptake. P-Formance offers a distinct alternative for those preferring to avoid fructose or whose needs align with efficient SGLT1 fueling.
                         </p>
                     </div>
-                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role</h3>
+                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg md:col-span-2"> 
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role for Gut Comfort</h3>
                         <p class="text-gray-600 text-sm">
-                            Maltodextrin's lower sweetness and osmolality (vs. simple sugars) can improve palatability and GI tolerance, aligning with P-Formance's use of optimized maltodextrin/glucose blends for gut comfort.
+                            Maltodextrin's lower sweetness and osmolality (vs. simple sugars) can improve palatability and GI tolerance, aligning with P-Formance's use of optimized maltodextrin/glucose blends for effective SGLT1 absorption and gut comfort.
                         </p>
                     </div>
                 </div>
@@ -205,7 +265,7 @@
                 </p>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                        <img src="images/athelete1.jpeg" alt="Athlete focused on performance and gut comfort" class="pillar-image">
+                        <img src="images/athlete1.png" alt="Athlete focused on performance and gut comfort" class="pillar-image">
                         <div class="p-6">
                             <div class="pillar-icon">🛡️</div>
                             <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Gut-Focused Fuel (Fructose-Free)</h3>
@@ -215,7 +275,7 @@
                         </div>
                     </div>
                     <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                        <img src="images/lab1.jpeg" alt="Clean lab setting representing tested formulas" class="pillar-image">
+                        <img src="images/lab1.png" alt="Clean lab setting representing tested formulas" class="pillar-image">
                          <div class="p-6">
                             <div class="pillar-icon">🔍</div>
                             <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Transparent & Tested Formulas</h3>
@@ -327,8 +387,151 @@
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        // Chart.js is loaded, but no charts are drawn in this version of the landing page to simplify and focus on text/icon based content.
-        // If you wish to add charts back (e.g., GI Distress Donut), you can add the canvas element and Chart.js script here.
+
+        const pformanceOrange = '#FF6F00';
+        const carbonBlack = '#1A1A1A';
+        const mediumGrey = '#6B7280'; // Tailwind gray-500
+        const chartAccentGrey = '#E0E0E0'; 
+        const pureWhite = '#FFFFFF';
+
+
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            if (!item || !item.chart || !item.chart.data || !item.chart.data.labels || typeof item.dataIndex === 'undefined') return '';
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        function wrapChartLabel(str, maxWidth) {
+            if (typeof str !== 'string') str = String(str);
+            if (str.length <= maxWidth) return str;
+            const words = str.split(' ');
+            let currentLine = '';
+            const lines = [];
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine.trim());
+            }
+            return lines.length > 0 ? lines : str; 
+        }
+
+
+        const giCtx = document.getElementById('giDistressChart')?.getContext('2d');
+        if (giCtx) {
+            new Chart(giCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Experience GI Distress', 'No Reported Distress'],
+                    datasets: [{
+                        label: '% of Athletes',
+                        data: [75, 25], 
+                        backgroundColor: [pformanceOrange, chartAccentGrey],
+                        borderColor: '#FFFFFF', 
+                        borderWidth: 2,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: carbonBlack,
+                                font: { size: 10 },
+                                boxWidth: 15,
+                                padding: 10
+                            }
+                        },
+                        tooltip: {
+                            callbacks: { title: tooltipTitleCallback },
+                            backgroundColor: carbonBlack,
+                            titleColor: pureWhite,
+                            bodyColor: pureWhite,
+                            borderColor: pformanceOrange,
+                            borderWidth: 1
+                        },
+                        title: {
+                            display: false 
+                        }
+                    }
+                }
+            });
+        }
+
+        const absorptionCtx = document.getElementById('absorptionPathwaysChart')?.getContext('2d');
+        if (absorptionCtx) {
+            new Chart(absorptionCtx, {
+                type: 'bar',
+                data: {
+                    labels: [wrapChartLabel('SGLT1 (Glucose/Maltodextrin)', 20), wrapChartLabel('GLUT5 (Fructose - alone)', 20)],
+                    datasets: [{
+                        label: 'Max Absorption Rate (g/hour)',
+                        data: [65, 30], 
+                        backgroundColor: [pformanceOrange, mediumGrey],
+                        borderColor: [carbonBlack, carbonBlack],
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                             display: true,
+                             position: 'top',
+                             labels: { color: carbonBlack, font: {size: 12}}
+                        },
+                        tooltip: { 
+                            callbacks: { title: tooltipTitleCallback },
+                            backgroundColor: carbonBlack,
+                            titleColor: pureWhite,
+                            bodyColor: pureWhite,
+                            borderColor: pformanceOrange,
+                            borderWidth: 1
+                        },
+                        title: {
+                            display: true,
+                            text: 'Carbohydrate Absorption Pathway Capacities',
+                            color: carbonBlack,
+                            font: { size: 16, weight: 'bold' },
+                            padding: { top: 10, bottom: 20 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Absorption Rate (g/hour)',
+                                color: carbonBlack,
+                                font: { size: 12 }
+                            },
+                            ticks: { color: carbonBlack, font: {size: 10} },
+                            grid: { color: chartAccentGrey }
+                        },
+                        x: {
+                            ticks: { color: carbonBlack, font: {size: 10} },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
     </script>
 
 </body>
