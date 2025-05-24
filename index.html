@@ -7,6 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- 
+        Landing Page for P-Formance
+        Focus: Fructose-Free Performance Nutrition, Clean Formulas, Sustainable Packaging - Investor Appeal
+        Color Scheme: "Action Orange & Carbon"
+        - P-Formance Orange (Primary Action, Highlights): #FF6F00
+        - Carbon Black (Text, Dark Accents): #1A1A1A
+        - Pure White (Backgrounds, Contrast Text): #FFFFFF
+        - Light Grey (Borders, Subtle Backgrounds): #F3F4F6 (Tailwind gray-100)
+        - Medium Grey (Subtle Text): #6B7280 (Tailwind gray-500)
+    -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -46,6 +56,14 @@
             margin-bottom: 0.75rem; 
             color: #FF6F00;
             line-height: 1;
+        }
+        .pillar-image {
+            width: 100%;
+            height: 160px; /* Adjust height as needed */
+            object-fit: cover; /* Ensures image covers the area, might crop */
+            border-top-left-radius: 0.5rem; /* Tailwind rounded-t-lg */
+            border-top-right-radius: 0.5rem; /* Tailwind rounded-t-lg */
+            margin-bottom: 1rem; /* Tailwind mb-4 */
         }
         .advantage-icon-bullet { 
              background-color: #FF6F00; 
@@ -186,26 +204,35 @@
                     We're not just another fuel. P-Formance is built on three foundational commitments to athletes and our world.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                        <div class="pillar-icon">🛡️</div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Gut-Focused Fuel (Fructose-Free)</h3>
-                        <p class="text-gray-600">
-                            Our cornerstone: <strong>Complete Fructose Avoidance.</strong> We eliminate a primary GI trigger by optimizing glucose/maltodextrin science for efficient SGLT1 pathway absorption, ensuring clean energy without the ache.
-                        </p>
+                    <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                        <img src="images/Gemini_Generated_Image_3balht3balht3bal.jpg" alt="Athlete focused on performance and gut comfort" class="pillar-image">
+                        <div class="p-6">
+                            <div class="pillar-icon">🛡️</div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Gut-Focused Fuel (Fructose-Free)</h3>
+                            <p class="text-gray-600">
+                                Our cornerstone: <strong>Complete Fructose Avoidance.</strong> We eliminate a primary GI trigger by optimizing glucose/maltodextrin science for efficient SGLT1 pathway absorption.
+                            </p>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                         <div class="pillar-icon">🔍</div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Transparent & Tested Formulas</h3>
-                        <p class="text-gray-600">
-                            Simple, minimal, high-quality ingredients. We provide <strong>clear insights</strong> into what you consume, with rigorously tested batches to ensure purity, efficacy, and <strong>avoid doping risks.</strong>
-                        </p>
+                    <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                        <img src="images/Gemini_Generated_Image_gi2yrbgi2yrbgi2y.jpg" alt="Clean lab setting representing tested formulas" class="pillar-image">
+                         <div class="p-6">
+                            <div class="pillar-icon">🔍</div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Transparent & Tested Formulas</h3>
+                            <p class="text-gray-600">
+                                Simple, minimal, high-quality ingredients. We provide <strong>clear insights</strong> into what you consume, with rigorously tested batches to ensure purity, efficacy, and <strong>avoid doping risks.</strong>
+                            </p>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                        <div class="pillar-icon">♻️</div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Sustainable & Smart Packaging</h3>
-                        <p class="text-gray-600">
-                            Moving beyond wasteful single-use sachets. We plan to offer powders for drinks and <strong>bulk gels for refillable soft flasks</strong>, reducing trash and offering better value.
-                        </p>
+                    <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                        <img src="images/bottle-filled.png" alt="Sustainable packaging concept with refillable flask" class="pillar-image">
+                        <div class="p-6">
+                            <div class="pillar-icon">♻️</div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Sustainable & Smart Packaging</h3>
+                            <p class="text-gray-600">
+                                Moving beyond wasteful single-use sachets. We plan to offer powders for drinks and <strong>bulk gels for refillable soft flasks</strong>, reducing trash and offering better value.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
