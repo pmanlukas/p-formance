@@ -80,13 +80,13 @@
              font-weight: bold;
              margin-right: 1rem; 
         }
-        .science-icon { /* Used for science rationale cards & fructose-free case */
+        .science-icon { 
             font-size: 2rem; 
             color: #FF6F00;
-            margin-right: 0.75rem; /* Tailwind mr-3 */
+            margin-right: 0.75rem; 
             line-height: 1; 
         }
-        .product-icon { /* For product system cards */
+        .product-icon { /* For old product system cards, can be removed if not used elsewhere */
             font-size: 2.5rem;
             color: #FF6F00;
             margin-bottom: 0.75rem;
@@ -115,26 +115,71 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem; /* Tailwind gap-2 */
+            gap: 0.5rem; 
         }
         .flowchart-step {
-            background-color: #F3F4F6; /* Tailwind gray-100 */
-            border: 2px solid #FF6F00; /* P-Formance Orange */
-            color: #1A1A1A; /* Carbon Black */
-            padding: 0.75rem 1.25rem; /* Tailwind p-3 px-5 */
-            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            background-color: #F3F4F6; 
+            border: 2px solid #FF6F00; 
+            color: #1A1A1A; 
+            padding: 0.75rem 1.25rem; 
+            border-radius: 0.5rem; 
             text-align: center;
-            font-size: 0.875rem; /* Tailwind text-sm */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow */
+            font-size: 0.875rem; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
             width: 80%;
             max-width: 350px;
         }
         .flowchart-arrow {
-            color: #FF6F00; /* P-Formance Orange */
-            font-size: 2rem; /* Tailwind text-3xl */
+            color: #FF6F00; 
+            font-size: 2rem; 
             line-height: 1;
             font-weight: bold;
         }
+        /* Fueling System Diagram Styles */
+        .fueling-system-diagram {
+            background-color: #F9FAFB; /* Tailwind gray-50 */
+            border: 1px solid #E0E0E0; /* Light Grey */
+            border-radius: 0.75rem; /* Tailwind rounded-xl */
+            padding: 1.5rem; /* Tailwind p-6 */
+        }
+        .fueling-phase {
+            margin-bottom: 1.5rem; /* Tailwind mb-6 */
+        }
+        .fueling-phase-title {
+            color: #FF6F00; /* P-Formance Orange */
+            font-weight: bold;
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+            text-align: center;
+            border-bottom: 1px solid #E0E0E0;
+            padding-bottom: 0.5rem;
+        }
+        .product-item {
+            background-color: #FFFFFF;
+            padding: 0.75rem; /* Tailwind p-3 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .product-item-icon {
+            font-size: 1.5rem; /* Tailwind text-2xl */
+            color: #FF6F00;
+            display: block;
+            margin: 0 auto 0.25rem auto; /* Tailwind mb-1 */
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start; /* Align icon with first line of text */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+        }
+        .benefit-icon {
+            color: #FF6F00;
+            font-size: 1.25rem; /* Tailwind text-xl */
+            margin-right: 0.75rem; /* Tailwind mr-3 */
+            flex-shrink: 0;
+            margin-top: 0.125rem; /* Adjust for better alignment with text */
+        }
+
     </style>
 </head>
 <body class="bg-white">
@@ -241,7 +286,7 @@
             </div>
         </section>
 
-        <section id="science" class="py-16 md:py-24 bg-gray-50"> {/* Changed background for visual separation */}
+        <section id="science" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
@@ -274,19 +319,19 @@
 
 
                 <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <div class="bg-white p-6 rounded-xl shadow-lg"> {/* Changed from bg-gray-50 for contrast */}
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⚠️</span>Fructose & GI Distress Link</h3>
                         <p class="text-gray-600 text-sm">
                             Research confirms that fructose ingested alone, or in non-optimized ratios, is linked to GI distress due to saturation of its GLUT5 transporter, leading to osmotic discomfort. This underpins our fructose-free commitment.
                         </p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-lg"> {/* Changed from bg-gray-50 for contrast */}
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔗</span>Understanding MTC Strategies</h3>
                         <p class="text-gray-600 text-sm">
                             Multiple Transportable Carbohydrate (MTC) formulas (glucose+fructose) aim to maximize CHO uptake. P-Formance offers a distinct alternative for those preferring to avoid fructose or whose needs align with efficient SGLT1 fueling.
                         </p>
                     </div>
-                     <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">  {/* Changed from bg-gray-50 for contrast */}
+                     <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role for Gut Comfort</h3>
                         <p class="text-gray-600 text-sm">
                             Maltodextrin's lower sweetness and osmolality (vs. simple sugars) can improve palatability and GI tolerance, aligning with P-Formance's use of optimized maltodextrin/glucose blends for effective SGLT1 absorption and gut comfort.
@@ -346,29 +391,71 @@
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The P-Formance Fueling System: Your Performance, Your Way</h2>
                     <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Our upcoming product line is designed as a cohesive, fructose-free system. All formulas will be neutral, allowing athletes to tailor them with their preferred natural flavors or electrolytes.
+                        Our upcoming product line is a cohesive, fructose-free system. All formulas are neutral, allowing athletes to tailor them with their preferred natural flavors or electrolytes.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                        <div class="product-icon">💧</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Performance Drink Mix</h3>
-                        <p class="text-gray-600 text-sm">Fructose-free powder to mix with water. Ideal for sustained energy during cycling, swimming, and long training sessions.</p>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="fueling-system-diagram">
+                        <div class="fueling-phase">
+                            <h4 class="fueling-phase-title">PRE-EVENT: CARB LOAD</h4>
+                            <div class="product-item">
+                                <span class="product-item-icon">🚀</span>
+                                <strong>Carb Loading Mix:</strong> Maximize glycogen stores.
+                            </div>
+                        </div>
+                        <div class="text-center flowchart-arrow my-2">↓</div>
+                        <div class="fueling-phase">
+                            <h4 class="fueling-phase-title">DURING ACTIVITY</h4>
+                            <div class="product-item">
+                                <span class="product-item-icon">💧</span>
+                                <strong>Performance Drink Mix:</strong> Sustained energy (cycling, swimming).
+                            </div>
+                            <div class="product-item">
+                                <span class="product-item-icon">🏃</span>
+                                <strong>Energy Gel (for Soft Flasks):</strong> Quick, portable energy (running).
+                            </div>
+                        </div>
+                        <div class="text-center flowchart-arrow my-2">↓</div>
+                        <div class="fueling-phase">
+                            <h4 class="fueling-phase-title">POST-WORKOUT: RECOVERY</h4>
+                            <div class="product-item">
+                                <span class="product-item-icon">💪</span>
+                                <strong>Recovery Mix:</strong> CHO + Vegan Protein for optimal repair.
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                        <div class="product-icon">🏃</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Energy Gel (Bulk)</h3>
-                        <p class="text-gray-600 text-sm">Concentrated fructose-free energy gel in larger packaging, designed to be decanted into reusable soft flasks for running and on-the-go fueling.</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                        <div class="product-icon">💪</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Post-Workout Recovery</h3>
-                        <p class="text-gray-600 text-sm">A precise blend of our fructose-free carbohydrate mix (approx. 70g) and clean, vegan protein (approx. 20g) to optimize recovery.</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                        <div class="product-icon">🚀</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Carb Loading Mix</h3>
-                        <p class="text-gray-600 text-sm">A high-carbohydrate, fructose-free formula designed to efficiently maximize glycogen stores in the days leading up to major competitions.</p>
+                    <div class="mt-8 md:mt-0">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">System Benefits:</h3>
+                        <div class="space-y-4">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🛡️</span>
+                                <div>
+                                    <h5 class="font-semibold">Fructose-Free Confidence</h5>
+                                    <p class="text-gray-600 text-sm">Eliminate a key source of GI distress for smoother fueling.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎨</span>
+                                <div>
+                                    <h5 class="font-semibold">Customizable & Adaptable</h5>
+                                    <p class="text-gray-600 text-sm">Neutral formulas allow you to add your own preferred flavors or electrolytes, tailoring to your exact needs.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔄</span>
+                                <div>
+                                    <h5 class="font-semibold">Comprehensive Fueling</h5>
+                                    <p class="text-gray-600 text-sm">A complete system covering all phases: carb-loading, in-activity energy, and post-workout recovery.</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🌍</span>
+                                <div>
+                                    <h5 class="font-semibold">Sustainable Approach</h5>
+                                    <p class="text-gray-600 text-sm">Bulk options and refillable flask compatibility reduce waste and offer better value.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
