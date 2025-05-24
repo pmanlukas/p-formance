@@ -15,7 +15,7 @@
         - Carbon Black (Text, Dark Accents): #1A1A1A
         - Pure White (Backgrounds, Contrast Text): #FFFFFF
         - Light Grey (Borders, Subtle Backgrounds): #F3F4F6 (Tailwind gray-100)
-        - Medium Grey (Subtle Text): #6B7280 (Tailwind gray-500)
+        - Medium Grey (Subtle Text, Chart Accents): #6B7280 (Tailwind gray-500)
         - Chart Accent Grey: #E0E0E0
     -->
     <style>
@@ -80,25 +80,35 @@
              font-weight: bold;
              margin-right: 1rem; 
         }
-        .science-icon {
+        .science-icon { /* Used for science rationale cards & fructose-free case */
             font-size: 2rem; 
             color: #FF6F00;
-            margin-right: 0.5rem; 
+            margin-right: 0.75rem; /* Tailwind mr-3 */
             line-height: 1; 
         }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 300px; /* Max width for donut chart in card */
-            height: 200px;   /* Fixed height for donut chart */
-            margin: 1rem auto 0 auto; /* mb-4 auto 0 auto */
+        .product-icon { /* For product system cards */
+            font-size: 2.5rem;
+            color: #FF6F00;
+            margin-bottom: 0.75rem;
         }
-        .bar-chart-container {
+        .chart-container { /* General chart container */
             position: relative;
             width: 100%;
-            max-width: 500px; /* Max width for bar chart */
-            height: 300px;   /* Fixed height for bar chart */
-            margin: 1.5rem auto; /* my-6 auto */
+            margin: 1rem auto 0 auto; 
+        }
+        .donut-chart-container { /* Specific for donut */
+            max-width: 300px; 
+            height: 200px;   
+        }
+        .bar-chart-container { /* Specific for bar charts */
+            max-width: 500px; 
+            height: 300px;   
+            margin: 1.5rem auto; 
+        }
+         .performance-chart-container { /* For the new performance line chart */
+            max-width: 600px;
+            height: 350px; 
+            margin: 1rem auto; 
         }
         /* Flowchart Styles */
         .flowchart-container {
@@ -134,8 +144,10 @@
             <a href="#" class="text-2xl font-bold text-[#FF6F00]">P-Formance</a>
             <div>
                 <a href="#problem" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">The Challenge</a>
+                <a href="#why-fructose-free" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Why Fructose-Free?</a>
                 <a href="#science" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our Science</a>
                 <a href="#pillars" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our Pillars</a>
+                <a href="#fueling-system" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our System</a>
                 <a href="#advantage" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Advantage</a>
                 <a href="#contact" class="bg-[#FF6F00] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#E66000]">Join Us</a>
             </div>
@@ -176,7 +188,7 @@
                         <p class="text-gray-600 text-sm mb-2">
                            Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel. Fructose is a key offender.
                         </p>
-                        <div class="chart-container mt-auto"> 
+                        <div class="chart-container donut-chart-container mt-auto"> 
                             <canvas id="giDistressChart"></canvas>
                         </div>
                     </div>
@@ -198,7 +210,38 @@
             </div>
         </section>
 
-        <section id="science" class="py-16 md:py-24">
+        <section id="why-fructose-free" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Why Fructose-Free? The P-Formance Edge</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                        Many athletes struggle with fructose, yet effective alternatives are scarce. P-Formance fills this critical gap.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 items-start">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🤕</span>Addressing Fructose Sensitivity</h3>
+                        <p class="text-gray-600 text-sm">
+                            A significant number of athletes experience GI distress (bloating, cramps) specifically due to fructose, even in MTC formulas. P-Formance provides a safe haven for these individuals.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⏱️</span>Optimal for All Training Durations</h3>
+                        <p class="text-gray-600 text-sm">
+                            For shorter training sessions (e.g., under 2-2.5 hours) where maximal CHO uptake via MTC isn't always necessary, fructose can be an unneeded complexity. Our fructose-free fuel offers efficient SGLT1-based energy without it.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🎯</span>Filling a Market Gap</h3>
+                        <p class="text-gray-600 text-sm">
+                            There's a clear lack of high-performance, scientifically-backed sports nutrition that is explicitly and entirely fructose-free. P-Formance is uniquely positioned to serve this overlooked market.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="science" class="py-16 md:py-24 bg-gray-50"> {/* Changed background for visual separation */}
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
@@ -231,19 +274,19 @@
 
 
                 <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="bg-white p-6 rounded-xl shadow-lg"> {/* Changed from bg-gray-50 for contrast */}
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⚠️</span>Fructose & GI Distress Link</h3>
                         <p class="text-gray-600 text-sm">
                             Research confirms that fructose ingested alone, or in non-optimized ratios, is linked to GI distress due to saturation of its GLUT5 transporter, leading to osmotic discomfort. This underpins our fructose-free commitment.
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="bg-white p-6 rounded-xl shadow-lg"> {/* Changed from bg-gray-50 for contrast */}
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔗</span>Understanding MTC Strategies</h3>
                         <p class="text-gray-600 text-sm">
                             Multiple Transportable Carbohydrate (MTC) formulas (glucose+fructose) aim to maximize CHO uptake. P-Formance offers a distinct alternative for those preferring to avoid fructose or whose needs align with efficient SGLT1 fueling.
                         </p>
                     </div>
-                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg md:col-span-2"> 
+                     <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">  {/* Changed from bg-gray-50 for contrast */}
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role for Gut Comfort</h3>
                         <p class="text-gray-600 text-sm">
                             Maltodextrin's lower sweetness and osmolality (vs. simple sugars) can improve palatability and GI tolerance, aligning with P-Formance's use of optimized maltodextrin/glucose blends for effective SGLT1 absorption and gut comfort.
@@ -298,17 +341,50 @@
             </div>
         </section>
 
+        <section id="fueling-system" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The P-Formance Fueling System: Your Performance, Your Way</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                        Our upcoming product line is designed as a cohesive, fructose-free system. All formulas will be neutral, allowing athletes to tailor them with their preferred natural flavors or electrolytes.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="product-icon">💧</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Performance Drink Mix</h3>
+                        <p class="text-gray-600 text-sm">Fructose-free powder to mix with water. Ideal for sustained energy during cycling, swimming, and long training sessions.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="product-icon">🏃</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Energy Gel (Bulk)</h3>
+                        <p class="text-gray-600 text-sm">Concentrated fructose-free energy gel in larger packaging, designed to be decanted into reusable soft flasks for running and on-the-go fueling.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="product-icon">💪</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Post-Workout Recovery</h3>
+                        <p class="text-gray-600 text-sm">A precise blend of our fructose-free carbohydrate mix (approx. 70g) and clean, vegan protein (approx. 20g) to optimize recovery.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                        <div class="product-icon">🚀</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Carb Loading Mix</h3>
+                        <p class="text-gray-600 text-sm">A high-carbohydrate, fructose-free formula designed to efficiently maximize glycogen stores in the days leading up to major competitions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="advantage" class="py-16 md:py-24 bg-gray-800 text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The P-Formance Advantage: Fueling the Future</h2>
                     <p class="text-lg text-gray-300 max-w-2xl mx-auto">
-                        Our three pillars translate into a unique market position and tangible benefits for athletes and investors alike.
+                        Our pillars translate into a unique market position and benefits for athletes and investors. See the potential impact:
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 items-center">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x450/1A1A1A/FF6F00?text=P-Formance:+Innovation+Ecosystem" alt="P-Formance: Clean Fuel Innovation - Gut Friendly, Transparent, Sustainable" class="rounded-xl shadow-2xl mx-auto">
+                    <div class="relative performance-chart-container">
+                        <canvas id="performanceOverTimeChart"></canvas> 
                     </div>
                     <div class="space-y-6">
                         <div class="flex items-start">
@@ -390,7 +466,7 @@
 
         const pformanceOrange = '#FF6F00';
         const carbonBlack = '#1A1A1A';
-        const mediumGrey = '#6B7280'; // Tailwind gray-500
+        const mediumGrey = '#6B7280'; 
         const chartAccentGrey = '#E0E0E0'; 
         const pureWhite = '#FFFFFF';
 
@@ -423,6 +499,68 @@
             }
             return lines.length > 0 ? lines : str; 
         }
+
+        const commonChartPluginOptions = {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: { color: carbonBlack, font: { size: 12 } }
+            },
+            tooltip: {
+                callbacks: { title: tooltipTitleCallback },
+                backgroundColor: carbonBlack,
+                titleColor: pureWhite,
+                bodyColor: pureWhite,
+                borderColor: pformanceOrange,
+                borderWidth: 1
+            },
+            title: {
+                display: true,
+                color: carbonBlack,
+                font: { size: 16, weight: 'bold' },
+                padding: { top: 10, bottom: 20 }
+            }
+        };
+        
+        const darkBgChartPluginOptions = {
+            legend: {
+                display: true,
+                position: 'top',
+                labels: { color: pureWhite, font: { size: 12 } } 
+            },
+            tooltip: {
+                callbacks: { title: tooltipTitleCallback },
+                backgroundColor: carbonBlack, 
+                titleColor: pureWhite,
+                bodyColor: pureWhite,
+                borderColor: pformanceOrange,
+                borderWidth: 1
+            },
+            title: {
+                display: true,
+                color: pureWhite, 
+                font: { size: 16, weight: 'bold' },
+                padding: { top: 10, bottom: 20 }
+            }
+        };
+
+
+        const commonChartScaleOptions = {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    color: carbonBlack,
+                    font: { size: 12 }
+                },
+                ticks: { color: carbonBlack, font: { size: 10 } },
+                grid: { color: chartAccentGrey }
+            },
+            x: {
+                ticks: { color: carbonBlack, font: { size: 10 } },
+                grid: { display: false }
+            }
+        };
 
 
         const giCtx = document.getElementById('giDistressChart')?.getContext('2d');
@@ -462,9 +600,7 @@
                             borderColor: pformanceOrange,
                             borderWidth: 1
                         },
-                        title: {
-                            display: false 
-                        }
+                        title: { display: false }
                     }
                 }
             });
@@ -489,43 +625,72 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                             display: true,
-                             position: 'top',
-                             labels: { color: carbonBlack, font: {size: 12}}
-                        },
-                        tooltip: { 
-                            callbacks: { title: tooltipTitleCallback },
-                            backgroundColor: carbonBlack,
-                            titleColor: pureWhite,
-                            bodyColor: pureWhite,
+                    plugins: { ...commonChartPluginOptions, title: {...commonChartPluginOptions.title, text: 'Carbohydrate Absorption Pathway Capacities'} },
+                    scales: { ...commonChartScaleOptions, y: {...commonChartScaleOptions.y, title: {...commonChartScaleOptions.y.title, text: 'Absorption Rate (g/hour)'}}}
+                }
+            });
+        }
+
+        const performanceTimeCtx = document.getElementById('performanceOverTimeChart')?.getContext('2d');
+        if(performanceTimeCtx) {
+            new Chart(performanceTimeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Start', '30 min', '1 hr', '1.5 hr', '2 hr', '2.5 hr', 'Finish (3hr~)'],
+                    datasets: [
+                        {
+                            label: 'With P-Formance Fuel',
+                            data: [100, 98, 95, 92, 88, 85, 80], 
                             borderColor: pformanceOrange,
-                            borderWidth: 1
+                            backgroundColor: 'rgba(255, 111, 0, 0.1)', 
+                            tension: 0.1,
+                            fill: true,
+                            pointRadius: 4,
+                            pointBackgroundColor: pformanceOrange
                         },
-                        title: {
-                            display: true,
-                            text: 'Carbohydrate Absorption Pathway Capacities',
-                            color: carbonBlack,
-                            font: { size: 16, weight: 'bold' },
-                            padding: { top: 10, bottom: 20 }
+                        {
+                            label: 'Without Fueling',
+                            data: [100, 90, 75, 60, 45, 30, 20], 
+                            borderColor: mediumGrey,
+                            backgroundColor: 'rgba(107, 114, 128, 0.1)', 
+                            tension: 0.1,
+                            fill: true,
+                            pointRadius: 4,
+                            pointBackgroundColor: mediumGrey
                         }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...darkBgChartPluginOptions, 
+                         title: {...darkBgChartPluginOptions.title, text: 'Performance Over Race Duration (Illustrative)'},
+                         legend: { ...darkBgChartPluginOptions.legend, position: 'bottom'}
                     },
                     scales: {
                         y: {
-                            beginAtZero: true,
+                            beginAtZero: false, 
+                            min: 0,
+                            max: 110, 
                             title: {
                                 display: true,
-                                text: 'Absorption Rate (g/hour)',
-                                color: carbonBlack,
+                                text: 'Performance Level (Arbitrary Units)',
+                                color: pureWhite, 
                                 font: { size: 12 }
                             },
-                            ticks: { color: carbonBlack, font: {size: 10} },
-                            grid: { color: chartAccentGrey }
+                            ticks: { color: pureWhite, font: {size: 10} }, 
+                            grid: { color: 'rgba(255,255,255,0.2)' } 
                         },
-                        x: {
-                            ticks: { color: carbonBlack, font: {size: 10} },
-                            grid: { display: false }
+                        x: { 
+                            title: {
+                                display: true,
+                                text: 'Race Duration',
+                                color: pureWhite,
+                                font: {size: 12}
+                            },
+                            ticks: { color: pureWhite, font: {size: 10} }, 
+                            grid: { color: 'rgba(255,255,255,0.1)' } 
                         }
                     }
                 }
