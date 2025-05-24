@@ -7,16 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- 
-        Landing Page for P-Formance
-        Focus: Fructose-Free Performance Nutrition, Clean Formulas, Sustainable Packaging - Investor Appeal
-        Color Scheme: "Action Orange & Carbon"
-        - P-Formance Orange (Primary Action, Highlights): #FF6F00
-        - Carbon Black (Text, Dark Accents): #1A1A1A
-        - Pure White (Backgrounds, Contrast Text): #FFFFFF
-        - Light Grey (Borders, Subtle Backgrounds): #F3F4F6 (Tailwind gray-100)
-        - Medium Grey (Subtle Text): #6B7280 (Tailwind gray-500)
-    -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -75,6 +65,7 @@
             font-size: 2rem; /* Tailwind text-3xl */
             color: #FF6F00;
             margin-right: 0.5rem; /* Tailwind mr-2 */
+            line-height: 1; /* Ensure icon vertical alignment */
         }
     </style>
 </head>
@@ -126,7 +117,7 @@
                         <div class="text-5xl text-[#FF6F00] mb-4">😟</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">The GI Distress Barrier</h3>
                         <p class="text-gray-600">
-                           Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel[cite: 163]. Fructose is a key offender due to its limited absorption[cite: 168].
+                           Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel. Fructose is a key offender due to its limited absorption.
                         </p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -152,32 +143,32 @@
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
                     <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Our approach is built on a deep understanding of carbohydrate metabolism and the challenges athletes face. The "Fructose in Endurance Sports Nutrition" report highlights several key insights that shape our fructose-free strategy:
+                        Our approach is built on a deep understanding of carbohydrate metabolism and the challenges athletes face. Key scientific insights shape our fructose-free strategy:
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8 items-start">
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">❗</span>Fructose & GI Distress Link</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⚠️</span>Fructose & GI Distress Link</h3>
                         <p class="text-gray-600 text-sm">
-                            The report confirms that fructose ingested alone, or in excessive amounts relative to glucose, is linked to GI distress due to saturation of its specific transporter (GLUT5)[cite: 163, 164]. Unabsorbed fructose can lead to osmotic discomfort[cite: 165, 166]. This underpins our commitment to fructose-free formulations.
+                            Research confirms that fructose ingested alone, or in non-optimized ratios, is linked to GI distress due to saturation of its GLUT5 transporter, leading to osmotic discomfort. This underpins our fructose-free commitment.
                         </p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔄</span>Carbohydrate Absorption Pathways</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⇆</span>Carbohydrate Absorption Pathways</h3>
                         <p class="text-gray-600 text-sm">
-                            Glucose (and maltodextrin, a glucose polymer) is absorbed via the SGLT1 transporter, with a capacity of about 60-70 g/hour[cite: 140, 266]. Fructose uses the GLUT5 transporter, with a lower capacity of around 30 g/hour when ingested alone[cite: 142, 268]. P-Formance focuses on optimizing the robust SGLT1 pathway.
+                            Glucose/maltodextrin are absorbed via the robust SGLT1 transporter (~60-70 g/hr). Fructose relies on the lower-capacity GLUT5 transporter (~30 g/hr alone). P-Formance focuses on optimizing the SGLT1 pathway.
                         </p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💡</span>Understanding MTC Strategies</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔗</span>Understanding MTC Strategies</h3>
                         <p class="text-gray-600 text-sm">
-                            The report details the Multiple Transportable Carbohydrate (MTC) strategy (combining glucose and fructose) to potentially increase total carbohydrate oxidation above SGLT1 limits[cite: 132, 174]. While beneficial for some aiming for >90g/hr intakes[cite: 186], P-Formance provides a distinct, high-performance alternative for athletes who prefer to avoid fructose or find their needs met within SGLT1 capacity, minimizing fructose-related risks.
+                            Multiple Transportable Carbohydrate (MTC) formulas (glucose+fructose) aim to maximize CHO uptake. P-Formance offers a distinct alternative for those preferring to avoid fructose or whose needs align with efficient SGLT1 fueling.
                         </p>
                     </div>
                      <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🌿</span>Maltodextrin's Role</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role</h3>
                         <p class="text-gray-600 text-sm">
-                            The report notes maltodextrin is often preferred in high-concentration products due to lower sweetness and osmolality, which can enhance palatability and GI tolerance[cite: 188, 189, 221]. This aligns with P-Formance's use of optimized maltodextrin/glucose blends.
+                            Maltodextrin's lower sweetness and osmolality (vs. simple sugars) can improve palatability and GI tolerance, aligning with P-Formance's use of optimized maltodextrin/glucose blends for gut comfort.
                         </p>
                     </div>
                 </div>
@@ -188,7 +179,7 @@
         </section>
 
 
-        <section id="pillars" class="py-16 md:py-24 bg-gray-100"> {/* Changed background for visual separation */}
+        <section id="pillars" class="py-16 md:py-24 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">P-Formance: Our Core Pillars for a New Era</h2>
                 <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
@@ -230,7 +221,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 items-center">
                     <div class="relative">
-                        <img src="https://placehold.co/600x450/1A1A1A/FF6F00?text=P-Formance:+Clean+Fuel+Innovation" alt="P-Formance: Clean Fuel Innovation - Gut Friendly, Transparent, Sustainable" class="rounded-xl shadow-2xl mx-auto">
+                        <img src="https://placehold.co/600x450/1A1A1A/FF6F00?text=P-Formance:+Innovation+Ecosystem" alt="P-Formance: Clean Fuel Innovation - Gut Friendly, Transparent, Sustainable" class="rounded-xl shadow-2xl mx-auto">
                     </div>
                     <div class="space-y-6">
                         <div class="flex items-start">
@@ -309,6 +300,8 @@
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Chart.js is loaded, but no charts are drawn in this version of the landing page to simplify and focus on text/icon based content.
+        // If you wish to add charts back (e.g., GI Distress Donut), you can add the canvas element and Chart.js script here.
     </script>
 
 </body>
