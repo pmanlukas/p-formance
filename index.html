@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P-Formance | Revolutionizing Sports Nutrition: Fructose-Free, Clean, Sustainable</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- 
+        Landing Page for P-Formance
+        Focus: Fructose-Free Performance Nutrition, Clean Formulas, Sustainable Packaging - Investor Appeal
+        Color Scheme: "Action Orange & Carbon"
+        - P-Formance Orange (Primary Action, Highlights): #FF6F00
+        - Carbon Black (Text, Dark Accents): #1A1A1A
+        - Pure White (Backgrounds, Contrast Text): #FFFFFF
+        - Light Grey (Borders, Subtle Backgrounds): #F3F4F6 (Tailwind gray-100)
+        - Medium Grey (Subtle Text): #6B7280 (Tailwind gray-500)
+    -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
             color: #1A1A1A; /* Carbon Black */
         }
         .hero-bg {
-            /* Suggestion for a real background image: 
-            Use a high-quality, dynamic image of an endurance athlete (runner/cyclist) in action, 
-            or an abstract representation of energy/nature. 
-            Ensure it's optimized for web and consider a subtle parallax effect if adding JS later.
-            */
             background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('images/Gemini_Generated_Image_9xl0pz9xl0pz9xl0.jpeg');
             background-size: cover;
             background-position: center;
@@ -45,25 +51,30 @@
         .highlight-orange {
             color: #FF6F00;
         }
-        .pillar-icon { /* For the three pillars */
-            font-size: 2.5rem; /* Tailwind text-4xl */
-            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+        .pillar-icon { 
+            font-size: 2.5rem; 
+            margin-bottom: 0.75rem; 
             color: #FF6F00;
             line-height: 1;
         }
         .advantage-icon-bullet { 
              background-color: #FF6F00; 
              color: #FFFFFF; 
-             border-radius: 9999px; /* full */
-             height: 2.5rem; /* h-10 */
-             width: 2.5rem; /* w-10 */
+             border-radius: 9999px; 
+             height: 2.5rem; 
+             width: 2.5rem; 
              min-width: 2.5rem;
              display: flex;
              align-items: center;
              justify-content: center;
-             font-size: 1.125rem; /* text-lg */
+             font-size: 1.125rem; 
              font-weight: bold;
-             margin-right: 1rem; /* mr-4 */
+             margin-right: 1rem; 
+        }
+        .science-icon {
+            font-size: 2rem; /* Tailwind text-3xl */
+            color: #FF6F00;
+            margin-right: 0.5rem; /* Tailwind mr-2 */
         }
     </style>
 </head>
@@ -74,6 +85,7 @@
             <a href="#" class="text-2xl font-bold text-[#FF6F00]">P-Formance</a>
             <div>
                 <a href="#problem" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">The Challenge</a>
+                <a href="#science" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our Science</a>
                 <a href="#pillars" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our Pillars</a>
                 <a href="#advantage" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Advantage</a>
                 <a href="#contact" class="bg-[#FF6F00] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#E66000]">Join Us</a>
@@ -114,7 +126,7 @@
                         <div class="text-5xl text-[#FF6F00] mb-4">😟</div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">The GI Distress Barrier</h3>
                         <p class="text-gray-600">
-                           Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel. Fructose is a key offender due to its limited absorption.
+                           Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel[cite: 163]. Fructose is a key offender due to its limited absorption[cite: 168].
                         </p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
@@ -135,28 +147,69 @@
             </div>
         </section>
 
-        <section id="pillars" class="py-16 md:py-24">
+        <section id="science" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                        Our approach is built on a deep understanding of carbohydrate metabolism and the challenges athletes face. The "Fructose in Endurance Sports Nutrition" report highlights several key insights that shape our fructose-free strategy:
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">❗</span>Fructose & GI Distress Link</h3>
+                        <p class="text-gray-600 text-sm">
+                            The report confirms that fructose ingested alone, or in excessive amounts relative to glucose, is linked to GI distress due to saturation of its specific transporter (GLUT5)[cite: 163, 164]. Unabsorbed fructose can lead to osmotic discomfort[cite: 165, 166]. This underpins our commitment to fructose-free formulations.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔄</span>Carbohydrate Absorption Pathways</h3>
+                        <p class="text-gray-600 text-sm">
+                            Glucose (and maltodextrin, a glucose polymer) is absorbed via the SGLT1 transporter, with a capacity of about 60-70 g/hour[cite: 140, 266]. Fructose uses the GLUT5 transporter, with a lower capacity of around 30 g/hour when ingested alone[cite: 142, 268]. P-Formance focuses on optimizing the robust SGLT1 pathway.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💡</span>Understanding MTC Strategies</h3>
+                        <p class="text-gray-600 text-sm">
+                            The report details the Multiple Transportable Carbohydrate (MTC) strategy (combining glucose and fructose) to potentially increase total carbohydrate oxidation above SGLT1 limits[cite: 132, 174]. While beneficial for some aiming for >90g/hr intakes[cite: 186], P-Formance provides a distinct, high-performance alternative for athletes who prefer to avoid fructose or find their needs met within SGLT1 capacity, minimizing fructose-related risks.
+                        </p>
+                    </div>
+                     <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🌿</span>Maltodextrin's Role</h3>
+                        <p class="text-gray-600 text-sm">
+                            The report notes maltodextrin is often preferred in high-concentration products due to lower sweetness and osmolality, which can enhance palatability and GI tolerance[cite: 188, 189, 221]. This aligns with P-Formance's use of optimized maltodextrin/glucose blends.
+                        </p>
+                    </div>
+                </div>
+                 <p class="text-center mt-10 text-gray-700">
+                    By understanding these complexities, P-Formance consciously chooses a <strong class="highlight-orange">fructose-free path</strong>, aiming to provide the most reliable, gut-friendly, and effective fuel for a significant segment of the athletic population.
+                </p>
+            </div>
+        </section>
+
+
+        <section id="pillars" class="py-16 md:py-24 bg-gray-100"> {/* Changed background for visual separation */}
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">P-Formance: Our Core Pillars for a New Era</h2>
                 <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
                     We're not just another fuel. P-Formance is built on three foundational commitments to athletes and our world.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                         <div class="pillar-icon">🛡️</div>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Gut-Focused Fuel (Fructose-Free)</h3>
                         <p class="text-gray-600">
                             Our cornerstone: <strong>Complete Fructose Avoidance.</strong> We eliminate a primary GI trigger by optimizing glucose/maltodextrin science for efficient SGLT1 pathway absorption, ensuring clean energy without the ache.
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                          <div class="pillar-icon">🔍</div>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Transparent & Tested Formulas</h3>
                         <p class="text-gray-600">
                             Simple, minimal, high-quality ingredients. We provide <strong>clear insights</strong> into what you consume, with rigorously tested batches to ensure purity, efficacy, and <strong>avoid doping risks.</strong>
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                         <div class="pillar-icon">♻️</div>
                         <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Sustainable & Smart Packaging</h3>
                         <p class="text-gray-600">
@@ -177,7 +230,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 items-center">
                     <div class="relative">
-                        <img src="https://placehold.co/600x450/1A1A1A/FF6F00?text=P-Formance:+Athlete+Focused+Innovation" alt="P-Formance: Athlete Focused, Science Driven, Eco-Conscious" class="rounded-xl shadow-2xl mx-auto">
+                        <img src="https://placehold.co/600x450/1A1A1A/FF6F00?text=P-Formance:+Clean+Fuel+Innovation" alt="P-Formance: Clean Fuel Innovation - Gut Friendly, Transparent, Sustainable" class="rounded-xl shadow-2xl mx-auto">
                     </div>
                     <div class="space-y-6">
                         <div class="flex items-start">
@@ -250,6 +303,7 @@
             <a href="#" class="text-2xl font-bold text-[#FF6F00] mb-4 inline-block">P-Formance</a>
             <p class="mb-2">Fuel Clean. Perform Strong. Sustainably.</p>
             <p class="text-sm">&copy; <span id="currentYear"></span> P-Formance. All Rights Reserved. Innovating for Athletes & Our Planet.</p>
+             <p class="text-xs mt-2">P-Formance is currently in the conceptual and early development phase. Information presented is based on scientific literature and future aspirations.</p>
         </div>
     </footer>
 
