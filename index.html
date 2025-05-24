@@ -10,52 +10,54 @@
     <!-- 
         Landing Page for P-Formance
         Focus: Fructose-Free Performance Nutrition, Clean Formulas, Sustainable Packaging - Investor Appeal
-        Color Scheme: "Action Orange & Carbon"
-        - P-Formance Orange (Primary Action, Highlights): #FF6F00
-        - Carbon Black (Text, Dark Accents): #1A1A1A
-        - Pure White (Backgrounds, Contrast Text): #FFFFFF
-        - Light Grey (Borders, Subtle Backgrounds): #F3F4F6 (Tailwind gray-100)
-        - Medium Grey (Subtle Text, Chart Accents): #6B7280 (Tailwind gray-500)
-        - Chart Accent Grey: #E0E0E0
+        New Color Scheme: "Petrol Performance"
+        - Petrol Deep: #005F60 (Dark backgrounds, accents)
+        - Electric Cyan: #00C9B1 (Primary Action, Highlights, Chart Accents)
+        - Carbon Text: #212121 (Main text)
+        - Pure White: #FFFFFF (Card backgrounds, text on petrol)
+        - Light Petrol Tint: #E0F2F1 (Subtle backgrounds for cards/sections)
+        - Medium Grey: #757575 (Subtle Text, secondary chart elements)
+        - Chart Grid Grey: #BDBDBD 
     -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            color: #1A1A1A; /* Carbon Black */
+            color: #212121; /* Carbon Text */
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('images/Gemini_Generated_Image_9xl0pz9xl0pz9xl0.jpeg');
+            /* Using Petrol Deep for hero background */
+            background-image: linear-gradient(rgba(0, 95, 96, 0.8), rgba(0, 95, 96, 0.8)), url('images/Gemini_Generated_Image_9xl0pz9xl0pz9xl0.jpeg');
             background-size: cover;
             background-position: center;
         }
         .btn-primary {
-            background-color: #FF6F00; /* P-Formance Orange */
-            color: #FFFFFF;
+            background-color: #00C9B1; /* Electric Cyan */
+            color: #FFFFFF; /* White text for contrast */
             transition: background-color 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: #E66000; /* Darker Orange */
+            background-color: #00A08D; /* Darker Cyan */
         }
         .btn-secondary {
             background-color: transparent;
-            color: #FF6F00; /* P-Formance Orange */
-            border: 2px solid #FF6F00;
+            color: #00C9B1; /* Electric Cyan */
+            border: 2px solid #00C9B1;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         .btn-secondary:hover {
-            background-color: #FF6F00;
+            background-color: #00C9B1;
             color: #FFFFFF;
         }
         .section-title {
-            color: #FF6F00; /* P-Formance Orange */
+            color: #005F60; /* Petrol Deep for section titles */
         }
-        .highlight-orange {
-            color: #FF6F00;
+        .highlight-cyan { /* Changed from highlight-orange */
+            color: #00C9B1; /* Electric Cyan */
         }
         .pillar-icon { 
             font-size: 2.5rem; 
             margin-bottom: 0.75rem; 
-            color: #FF6F00;
+            color: #00C9B1; /* Electric Cyan */
             line-height: 1;
         }
         .pillar-image {
@@ -67,7 +69,7 @@
             margin-bottom: 1rem; 
         }
         .advantage-icon-bullet { 
-             background-color: #FF6F00; 
+             background-color: #00C9B1; /* Electric Cyan */
              color: #FFFFFF; 
              border-radius: 9999px; 
              height: 2.5rem; 
@@ -82,35 +84,34 @@
         }
         .science-icon { 
             font-size: 2rem; 
-            color: #FF6F00;
+            color: #00C9B1; /* Electric Cyan */
             margin-right: 0.75rem; 
             line-height: 1; 
         }
-        .product-icon { /* For old product system cards, can be removed if not used elsewhere */
+        .product-icon { 
             font-size: 2.5rem;
-            color: #FF6F00;
+            color: #00C9B1; /* Electric Cyan */
             margin-bottom: 0.75rem;
         }
-        .chart-container { /* General chart container */
+        .chart-container { 
             position: relative;
             width: 100%;
             margin: 1rem auto 0 auto; 
         }
-        .donut-chart-container { /* Specific for donut */
+        .donut-chart-container { 
             max-width: 300px; 
             height: 200px;   
         }
-        .bar-chart-container { /* Specific for bar charts */
+        .bar-chart-container { 
             max-width: 500px; 
             height: 300px;   
             margin: 1.5rem auto; 
         }
-         .performance-chart-container { /* For the new performance line chart */
+         .performance-chart-container { 
             max-width: 600px;
             height: 350px; 
             margin: 1rem auto; 
         }
-        /* Flowchart Styles */
         .flowchart-container {
             display: flex;
             flex-direction: column;
@@ -118,9 +119,9 @@
             gap: 0.5rem; 
         }
         .flowchart-step {
-            background-color: #F3F4F6; 
-            border: 2px solid #FF6F00; 
-            color: #1A1A1A; 
+            background-color: #E0F2F1; /* Light Petrol Tint */
+            border: 2px solid #00C9B1; /* Electric Cyan */
+            color: #212121; 
             padding: 0.75rem 1.25rem; 
             border-radius: 0.5rem; 
             text-align: center;
@@ -130,54 +131,59 @@
             max-width: 350px;
         }
         .flowchart-arrow {
-            color: #FF6F00; 
+            color: #00C9B1; /* Electric Cyan */
             font-size: 2rem; 
             line-height: 1;
             font-weight: bold;
         }
-        /* Fueling System Diagram Styles */
         .fueling-system-diagram {
-            background-color: #F9FAFB; /* Tailwind gray-50 */
-            border: 1px solid #E0E0E0; /* Light Grey */
-            border-radius: 0.75rem; /* Tailwind rounded-xl */
-            padding: 1.5rem; /* Tailwind p-6 */
+            background-color: #E0F2F1; /* Light Petrol Tint */
+            border: 1px solid #BDBDBD; /* Chart Grid Grey */
+            border-radius: 0.75rem; 
+            padding: 1.5rem; 
         }
         .fueling-phase {
-            margin-bottom: 1.5rem; /* Tailwind mb-6 */
+            margin-bottom: 1.5rem; 
         }
         .fueling-phase-title {
-            color: #FF6F00; /* P-Formance Orange */
+            color: #005F60; /* Petrol Deep */
             font-weight: bold;
-            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+            margin-bottom: 0.5rem; 
             text-align: center;
-            border-bottom: 1px solid #E0E0E0;
+            border-bottom: 1px solid #BDBDBD; /* Chart Grid Grey */
             padding-bottom: 0.5rem;
         }
         .product-item {
             background-color: #FFFFFF;
-            padding: 0.75rem; /* Tailwind p-3 */
-            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            padding: 0.75rem; 
+            border-radius: 0.5rem; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             text-align: center;
             margin-bottom: 0.5rem;
         }
         .product-item-icon {
-            font-size: 1.5rem; /* Tailwind text-2xl */
-            color: #FF6F00;
+            font-size: 1.5rem; 
+            color: #00C9B1; /* Electric Cyan */
             display: block;
-            margin: 0 auto 0.25rem auto; /* Tailwind mb-1 */
+            margin: 0 auto 0.25rem auto; 
         }
         .benefit-item {
             display: flex;
-            align-items: flex-start; /* Align icon with first line of text */
-            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            align-items: flex-start; 
+            margin-bottom: 0.75rem; 
         }
         .benefit-icon {
-            color: #FF6F00;
-            font-size: 1.25rem; /* Tailwind text-xl */
-            margin-right: 0.75rem; /* Tailwind mr-3 */
+            color: #00C9B1; /* Electric Cyan */
+            font-size: 1.25rem; 
+            margin-right: 0.75rem; 
             flex-shrink: 0;
-            margin-top: 0.125rem; /* Adjust for better alignment with text */
+            margin-top: 0.125rem; 
+        }
+        .bg-light-petrol-tint {
+            background-color: #E0F2F1; /* Light Petrol Tint */
+        }
+        .bg-dark-petrol {
+            background-color: #005F60; /* Petrol Deep */
         }
 
     </style>
@@ -186,15 +192,15 @@
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-[#FF6F00]">P-Formance</a>
+            <a href="#" class="text-2xl font-bold text-[#00C9B1]">P-Formance</a> {/* Electric Cyan */}
             <div>
-                <a href="#problem" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">The Challenge</a>
-                <a href="#why-fructose-free" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Why Fructose-Free?</a>
-                <a href="#science" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our Science</a>
-                <a href="#pillars" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our Pillars</a>
-                <a href="#fueling-system" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Our System</a>
-                <a href="#advantage" class="text-gray-700 hover:text-[#FF6F00] px-3 py-2 rounded-md text-sm font-medium">Advantage</a>
-                <a href="#contact" class="bg-[#FF6F00] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#E66000]">Join Us</a>
+                <a href="#problem" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">The Challenge</a>
+                <a href="#why-fructose-free" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Why Fructose-Free?</a>
+                <a href="#science" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Our Science</a>
+                <a href="#pillars" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Our Pillars</a>
+                <a href="#fueling-system" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Our System</a>
+                <a href="#advantage" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Advantage</a>
+                <a href="#contact" class="btn-primary px-4 py-2 rounded-md text-sm font-medium">Join Us</a> {/* Uses .btn-primary styles */}
             </div>
         </div>
     </nav>
@@ -202,7 +208,7 @@
     <header class="hero-bg text-white">
         <div class="container mx-auto px-6 py-20 md:py-32 text-center">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-                Peak Performance. <span class="highlight-orange">Zero Compromise.</span>
+                Peak Performance. <span class="highlight-cyan">Zero Compromise.</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
                 P-Formance is redefining sports nutrition with fructose-free fuel that's clean, effective, and sustainable. Invest in the future of athletic potential.
@@ -219,7 +225,7 @@
     </header>
 
     <main>
-        <section id="problem" class="py-16 md:py-24 bg-gray-50">
+        <section id="problem" class="py-16 md:py-24 bg-light-petrol-tint"> {/* Light Petrol Tint BG */}
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The Endurance Athlete's Unmet Needs</h2>
@@ -238,14 +244,14 @@
                         </div>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <div class="text-5xl text-[#FF6F00] mb-4">🧪</div>
+                        <div class="text-5xl text-[#00C9B1] mb-4">🧪</div> {/* Electric Cyan */}
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">Formula & Doping Concerns</h3>
                         <p class="text-gray-600">
                             Complex, unclear ingredient lists raise concerns. Athletes need assurance of clean, tested formulas to avoid inadvertent doping.
                         </p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <div class="text-5xl text-[#FF6F00] mb-4">🗑️</div>
+                        <div class="text-5xl text-[#00C9B1] mb-4">🗑️</div> {/* Electric Cyan */}
                         <h3 class="text-xl font-semibold text-gray-900 mb-2">The Packaging Problem</h3>
                         <p class="text-gray-600">
                             Individual sachets create excessive waste. Athletes and the planet need smarter, sustainable packaging solutions that offer better value.
@@ -255,7 +261,7 @@
             </div>
         </section>
 
-        <section id="why-fructose-free" class="py-16 md:py-24">
+        <section id="why-fructose-free" class="py-16 md:py-24 bg-white"> {/* White BG */}
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Why Fructose-Free? The P-Formance Edge</h2>
@@ -264,19 +270,19 @@
                     </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 items-start">
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="bg-light-petrol-tint p-6 rounded-xl shadow-lg"> {/* Light Petrol Tint cards */}
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🤕</span>Addressing Fructose Sensitivity</h3>
                         <p class="text-gray-600 text-sm">
                             A significant number of athletes experience GI distress (bloating, cramps) specifically due to fructose, even in MTC formulas. P-Formance provides a safe haven for these individuals.
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="bg-light-petrol-tint p-6 rounded-xl shadow-lg">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⏱️</span>Optimal for All Training Durations</h3>
                         <p class="text-gray-600 text-sm">
                             For shorter training sessions (e.g., under 2-2.5 hours) where maximal CHO uptake via MTC isn't always necessary, fructose can be an unneeded complexity. Our fructose-free fuel offers efficient SGLT1-based energy without it.
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <div class="bg-light-petrol-tint p-6 rounded-xl shadow-lg">
                         <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🎯</span>Filling a Market Gap</h3>
                         <p class="text-gray-600 text-sm">
                             There's a clear lack of high-performance, scientifically-backed sports nutrition that is explicitly and entirely fructose-free. P-Formance is uniquely positioned to serve this overlooked market.
@@ -286,7 +292,7 @@
             </div>
         </section>
 
-        <section id="science" class="py-16 md:py-24 bg-gray-50">
+        <section id="science" class="py-16 md:py-24 bg-light-petrol-tint"> {/* Light Petrol Tint BG */}
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
@@ -339,20 +345,20 @@
                     </div>
                 </div>
                  <p class="text-center mt-10 text-gray-700">
-                    By understanding these complexities, P-Formance consciously chooses a <strong class="highlight-orange">fructose-free path</strong>, aiming to provide the most reliable, gut-friendly, and effective fuel for a significant segment of the athletic population.
+                    By understanding these complexities, P-Formance consciously chooses a <strong class="highlight-cyan">fructose-free path</strong>, aiming to provide the most reliable, gut-friendly, and effective fuel for a significant segment of the athletic population.
                 </p>
             </div>
         </section>
 
 
-        <section id="pillars" class="py-16 md:py-24 bg-gray-100">
+        <section id="pillars" class="py-16 md:py-24 bg-white"> {/* White BG */}
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">P-Formance: Our Core Pillars for a New Era</h2>
                 <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
                     We're not just another fuel. P-Formance is built on three foundational commitments to athletes and our world.
                 </p>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="bg-light-petrol-tint rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                         <img src="images/athlete1.png" alt="Athlete focused on performance and gut comfort" class="pillar-image">
                         <div class="p-6">
                             <div class="pillar-icon">🛡️</div>
@@ -362,7 +368,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="bg-light-petrol-tint rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                         <img src="images/lab1.png" alt="Clean lab setting representing tested formulas" class="pillar-image">
                          <div class="p-6">
                             <div class="pillar-icon">🔍</div>
@@ -372,7 +378,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="bg-light-petrol-tint rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                         <img src="images/bottle-filled.png" alt="Sustainable packaging concept with refillable flask" class="pillar-image">
                         <div class="p-6">
                             <div class="pillar-icon">♻️</div>
@@ -386,7 +392,7 @@
             </div>
         </section>
 
-        <section id="fueling-system" class="py-16 md:py-24">
+        <section id="fueling-system" class="py-16 md:py-24 bg-white"> {/* White BG */}
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The P-Formance Fueling System: Your Performance, Your Way</h2>
@@ -461,10 +467,10 @@
             </div>
         </section>
 
-        <section id="advantage" class="py-16 md:py-24 bg-gray-800 text-white">
+        <section id="advantage" class="py-16 md:py-24 bg-dark-petrol text-white"> {/* Dark Petrol BG */}
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The P-Formance Advantage: Fueling the Future</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The P-Formance Advantage: Fueling the Future</h2> {/* Title color white for contrast */}
                     <p class="text-lg text-gray-300 max-w-2xl mx-auto">
                         Our pillars translate into a unique market position and benefits for athletes and investors. See the potential impact:
                     </p>
@@ -507,7 +513,7 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <section id="contact" class="py-16 md:py-24 bg-light-petrol-tint"> {/* Light Petrol Tint BG */}
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">Join the P-Formance Movement</h2>
                 <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
@@ -518,7 +524,7 @@
                     <p class="text-gray-600 mb-6 text-sm">Get exclusive news, product sneak peeks, and early access opportunities.</p>
                     <form action="#" method="POST" class="flex flex-col sm:flex-row gap-4">
                         <input type="email" name="email" placeholder="Enter your email" required
-                               class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#FF6F00] focus:border-transparent outline-none shadow-sm">
+                               class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#00C9B1] focus:border-transparent outline-none shadow-sm">
                         <button type="submit" class="btn-primary font-semibold py-3 px-6 rounded-lg text-lg shadow-md">
                             Notify Me
                         </button>
@@ -539,9 +545,9 @@
         </section>
     </main>
 
-    <footer class="bg-[#1A1A1A] text-gray-400 py-12">
+    <footer class="bg-[#005F60] text-gray-300 py-12"> {/* Dark Petrol BG, lighter text */}
         <div class="container mx-auto px-6 text-center">
-            <a href="#" class="text-2xl font-bold text-[#FF6F00] mb-4 inline-block">P-Formance</a>
+            <a href="#" class="text-2xl font-bold text-[#00C9B1] mb-4 inline-block">P-Formance</a> {/* Electric Cyan */}
             <p class="mb-2">Fuel Clean. Perform Strong. Sustainably.</p>
             <p class="text-sm">&copy; <span id="currentYear"></span> P-Formance. All Rights Reserved. Innovating for Athletes & Our Planet.</p>
              <p class="text-xs mt-2">P-Formance is currently in the conceptual and early development phase. Information presented is based on scientific literature and future aspirations.</p>
@@ -551,10 +557,10 @@
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        const pformanceOrange = '#FF6F00';
-        const carbonBlack = '#1A1A1A';
-        const mediumGrey = '#6B7280'; 
-        const chartAccentGrey = '#E0E0E0'; 
+        const electricCyan = '#00C9B1';
+        const carbonText = '#212121';
+        const mediumGrey = '#757575'; 
+        const chartGridGrey = '#BDBDBD'; 
         const pureWhite = '#FFFFFF';
 
 
@@ -591,19 +597,19 @@
             legend: {
                 display: true,
                 position: 'top',
-                labels: { color: carbonBlack, font: { size: 12 } }
+                labels: { color: carbonText, font: { size: 12 } }
             },
             tooltip: {
                 callbacks: { title: tooltipTitleCallback },
-                backgroundColor: carbonBlack,
+                backgroundColor: carbonText,
                 titleColor: pureWhite,
                 bodyColor: pureWhite,
-                borderColor: pformanceOrange,
+                borderColor: electricCyan,
                 borderWidth: 1
             },
             title: {
                 display: true,
-                color: carbonBlack,
+                color: carbonText,
                 font: { size: 16, weight: 'bold' },
                 padding: { top: 10, bottom: 20 }
             }
@@ -617,10 +623,10 @@
             },
             tooltip: {
                 callbacks: { title: tooltipTitleCallback },
-                backgroundColor: carbonBlack, 
+                backgroundColor: carbonText, 
                 titleColor: pureWhite,
                 bodyColor: pureWhite,
-                borderColor: pformanceOrange,
+                borderColor: electricCyan,
                 borderWidth: 1
             },
             title: {
@@ -637,14 +643,14 @@
                 beginAtZero: true,
                 title: {
                     display: true,
-                    color: carbonBlack,
+                    color: carbonText,
                     font: { size: 12 }
                 },
-                ticks: { color: carbonBlack, font: { size: 10 } },
-                grid: { color: chartAccentGrey }
+                ticks: { color: carbonText, font: { size: 10 } },
+                grid: { color: chartGridGrey }
             },
             x: {
-                ticks: { color: carbonBlack, font: { size: 10 } },
+                ticks: { color: carbonText, font: { size: 10 } },
                 grid: { display: false }
             }
         };
@@ -659,7 +665,7 @@
                     datasets: [{
                         label: '% of Athletes',
                         data: [75, 25], 
-                        backgroundColor: [pformanceOrange, chartAccentGrey],
+                        backgroundColor: [electricCyan, chartGridGrey],
                         borderColor: '#FFFFFF', 
                         borderWidth: 2,
                         hoverOffset: 4
@@ -673,7 +679,7 @@
                         legend: {
                             position: 'bottom',
                             labels: {
-                                color: carbonBlack,
+                                color: carbonText,
                                 font: { size: 10 },
                                 boxWidth: 15,
                                 padding: 10
@@ -681,10 +687,10 @@
                         },
                         tooltip: {
                             callbacks: { title: tooltipTitleCallback },
-                            backgroundColor: carbonBlack,
+                            backgroundColor: carbonText,
                             titleColor: pureWhite,
                             bodyColor: pureWhite,
-                            borderColor: pformanceOrange,
+                            borderColor: electricCyan,
                             borderWidth: 1
                         },
                         title: { display: false }
@@ -702,8 +708,8 @@
                     datasets: [{
                         label: 'Max Absorption Rate (g/hour)',
                         data: [65, 30], 
-                        backgroundColor: [pformanceOrange, mediumGrey],
-                        borderColor: [carbonBlack, carbonBlack],
+                        backgroundColor: [electricCyan, mediumGrey],
+                        borderColor: [carbonText, carbonText],
                         borderWidth: 1,
                         borderRadius: 4,
                         barPercentage: 0.6
@@ -728,18 +734,18 @@
                         {
                             label: 'With P-Formance Fuel',
                             data: [100, 98, 95, 92, 88, 85, 80], 
-                            borderColor: pformanceOrange,
-                            backgroundColor: 'rgba(255, 111, 0, 0.1)', 
+                            borderColor: electricCyan,
+                            backgroundColor: 'rgba(0, 201, 177, 0.1)', // Light cyan fill
                             tension: 0.1,
                             fill: true,
                             pointRadius: 4,
-                            pointBackgroundColor: pformanceOrange
+                            pointBackgroundColor: electricCyan
                         },
                         {
                             label: 'Without Fueling',
                             data: [100, 90, 75, 60, 45, 30, 20], 
                             borderColor: mediumGrey,
-                            backgroundColor: 'rgba(107, 114, 128, 0.1)', 
+                            backgroundColor: 'rgba(117, 117, 117, 0.1)', // Light grey fill
                             tension: 0.1,
                             fill: true,
                             pointRadius: 4,
