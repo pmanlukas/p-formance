@@ -11,18 +11,18 @@
         Landing Page for P-Formance
         Focus: Fructose-Free Performance Nutrition, Clean Formulas, Sustainable Packaging - Investor Appeal
         Color Scheme: "Petrol Performance"
-        - Petrol Deep: #005F60 (Dark backgrounds, accents)
-        - Electric Cyan: #00C9B1 (Primary Action, Highlights, Chart Accents)
-        - Carbon Text: #212121 (Main text)
-        - Pure White: #FFFFFF (Card backgrounds, text on petrol)
-        - Light Petrol Tint: #E0F2F1 (Subtle backgrounds for cards/sections)
-        - Medium Grey: #757575 (Subtle Text, secondary chart elements)
+        - Petrol Deep: #005F60 
+        - Electric Cyan: #00C9B1 
+        - Carbon Text: #212121 
+        - Pure White: #FFFFFF 
+        - Light Petrol Tint: #E0F2F1 
+        - Medium Grey: #757575 
         - Chart Grid Grey: #BDBDBD 
     -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            color: #212121; /* Carbon Text */
+            color: #212121; 
         }
         .hero-bg {
             background-image: linear-gradient(rgba(0, 95, 96, 0.8), rgba(0, 95, 96, 0.8)), url('images/Gemini_Generated_Image_9xl0pz9xl0pz9xl0.jpeg');
@@ -30,16 +30,16 @@
             background-position: center;
         }
         .btn-primary {
-            background-color: #00C9B1; /* Electric Cyan */
-            color: #FFFFFF; /* White text for contrast */
+            background-color: #00C9B1; 
+            color: #FFFFFF; 
             transition: background-color 0.3s ease;
         }
         .btn-primary:hover {
-            background-color: #00A08D; /* Darker Cyan */
+            background-color: #00A08D; 
         }
         .btn-secondary {
             background-color: transparent;
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
             border: 2px solid #00C9B1;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -48,15 +48,15 @@
             color: #FFFFFF;
         }
         .section-title {
-            color: #005F60; /* Petrol Deep for section titles */
+            color: #005F60; 
         }
         .highlight-cyan { 
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
         }
         .pillar-icon { 
             font-size: 2.5rem; 
             margin-bottom: 0.75rem; 
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
             line-height: 1;
         }
         .pillar-image {
@@ -68,7 +68,7 @@
             margin-bottom: 1rem; 
         }
         .advantage-icon-bullet { 
-             background-color: #00C9B1; /* Electric Cyan */
+             background-color: #00C9B1; 
              color: #FFFFFF; 
              border-radius: 9999px; 
              height: 2.5rem; 
@@ -83,13 +83,13 @@
         }
         .science-icon { 
             font-size: 2rem; 
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
             margin-right: 0.75rem; 
             line-height: 1; 
         }
         .product-icon { 
             font-size: 2.5rem;
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
             margin-bottom: 0.75rem;
         }
         .chart-container { 
@@ -98,17 +98,17 @@
             margin: 1rem auto 0 auto; 
         }
         .donut-chart-container { 
-            max-width: 300px; 
-            height: 200px;   
+            max-width: 280px; /* Slightly smaller for mobile */
+            height: 180px;   /* Slightly smaller for mobile */
         }
         .bar-chart-container { 
-            max-width: 500px; 
-            height: 300px;   
+            max-width: 100%; /* Full width on mobile, parent will constrain */
+            height: 280px; /* Adjusted for mobile */  
             margin: 1.5rem auto; 
         }
          .performance-chart-container { 
-            max-width: 600px;
-            height: 350px; 
+            max-width: 100%; /* Full width on mobile */
+            height: 300px; /* Adjusted for mobile */ 
             margin: 1rem auto; 
         }
         .flowchart-container {
@@ -118,38 +118,38 @@
             gap: 0.5rem; 
         }
         .flowchart-step {
-            background-color: #E0F2F1; /* Light Petrol Tint */
-            border: 2px solid #00C9B1; /* Electric Cyan */
+            background-color: #E0F2F1; 
+            border: 2px solid #00C9B1; 
             color: #212121; 
-            padding: 0.75rem 1.25rem; 
+            padding: 0.75rem 1rem; /* Adjusted padding for mobile */
             border-radius: 0.5rem; 
             text-align: center;
             font-size: 0.875rem; 
             box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
-            width: 80%;
+            width: 90%; /* Wider on mobile */
             max-width: 350px;
         }
         .flowchart-arrow {
-            color: #00C9B1; /* Electric Cyan */
-            font-size: 2rem; 
+            color: #00C9B1; 
+            font-size: 1.75rem; /* Slightly smaller arrow for mobile */
             line-height: 1;
             font-weight: bold;
         }
         .fueling-system-diagram {
-            background-color: #E0F2F1; /* Light Petrol Tint */
-            border: 1px solid #BDBDBD; /* Chart Grid Grey */
+            background-color: #E0F2F1; 
+            border: 1px solid #BDBDBD; 
             border-radius: 0.75rem; 
-            padding: 1.5rem; 
+            padding: 1rem; /* Adjusted padding */
         }
         .fueling-phase {
-            margin-bottom: 1.5rem; 
+            margin-bottom: 1rem; 
         }
         .fueling-phase-title {
-            color: #005F60; /* Petrol Deep */
+            color: #005F60; 
             font-weight: bold;
             margin-bottom: 0.5rem; 
             text-align: center;
-            border-bottom: 1px solid #BDBDBD; /* Chart Grid Grey */
+            border-bottom: 1px solid #BDBDBD; 
             padding-bottom: 0.5rem;
         }
         .product-item {
@@ -162,7 +162,7 @@
         }
         .product-item-icon {
             font-size: 1.5rem; 
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
             display: block;
             margin: 0 auto 0.25rem auto; 
         }
@@ -172,17 +172,17 @@
             margin-bottom: 0.75rem; 
         }
         .benefit-icon {
-            color: #00C9B1; /* Electric Cyan */
+            color: #00C9B1; 
             font-size: 1.25rem; 
             margin-right: 0.75rem; 
             flex-shrink: 0;
             margin-top: 0.125rem; 
         }
         .bg-light-petrol-tint {
-            background-color: #E0F2F1; /* Light Petrol Tint */
+            background-color: #E0F2F1; 
         }
         .bg-dark-petrol {
-            background-color: #005F60; /* Petrol Deep */
+            background-color: #005F60; 
         }
 
     </style>
@@ -190,9 +190,9 @@
 <body class="bg-white">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-[#00C9B1]">P-Formance</a> 
-            <div>
+        <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl sm:text-2xl font-bold text-[#00C9B1]">P-Formance</a> 
+            <div class="hidden md:flex space-x-1"> {/* Hide on mobile, show on md up */}
                 <a href="#problem" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">The Challenge</a>
                 <a href="#why-fructose-free" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Why Fructose-Free?</a>
                 <a href="#science" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Our Science</a>
@@ -201,22 +201,39 @@
                 <a href="#advantage" class="text-gray-700 hover:text-[#00C9B1] px-3 py-2 rounded-md text-sm font-medium">Advantage</a>
                 <a href="#contact" class="btn-primary px-4 py-2 rounded-md text-sm font-medium">Join Us</a> 
             </div>
+            <div class="md:hidden"> {/* Hamburger Menu Button - Basic Placeholder */}
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-[#00C9B1] focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        {/* Mobile Menu - Hidden by default */}
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#problem" class="block text-gray-700 hover:bg-gray-100 hover:text-[#00C9B1] px-4 py-3 text-sm font-medium">The Challenge</a>
+            <a href="#why-fructose-free" class="block text-gray-700 hover:bg-gray-100 hover:text-[#00C9B1] px-4 py-3 text-sm font-medium">Why Fructose-Free?</a>
+            <a href="#science" class="block text-gray-700 hover:bg-gray-100 hover:text-[#00C9B1] px-4 py-3 text-sm font-medium">Our Science</a>
+            <a href="#pillars" class="block text-gray-700 hover:bg-gray-100 hover:text-[#00C9B1] px-4 py-3 text-sm font-medium">Our Pillars</a>
+            <a href="#fueling-system" class="block text-gray-700 hover:bg-gray-100 hover:text-[#00C9B1] px-4 py-3 text-sm font-medium">Our System</a>
+            <a href="#advantage" class="block text-gray-700 hover:bg-gray-100 hover:text-[#00C9B1] px-4 py-3 text-sm font-medium">Advantage</a>
+            <a href="#contact" class="block bg-[#00C9B1] text-white text-center mx-4 my-2 px-4 py-3 text-sm font-medium rounded-md hover:bg-[#00A08D]">Join Us</a> 
         </div>
     </nav>
 
     <header class="hero-bg text-white">
-        <div class="container mx-auto px-6 py-20 md:py-32 text-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        <div class="container mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-32 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-4 sm:mb-6">
                 Peak Performance. <span class="highlight-cyan">Zero Compromise.</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
+            <p class="text-md sm:text-lg md:text-xl text-gray-200 mb-8 sm:mb-10 max-w-xl md:max-w-3xl mx-auto">
                 P-Formance is redefining sports nutrition with fructose-free fuel that's clean, effective, and sustainable. Invest in the future of athletic potential.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#pillars" class="btn-primary font-semibold py-3 px-8 rounded-lg text-lg shadow-lg w-full sm:w-auto">
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+                <a href="#pillars" class="btn-primary font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-lg text-md sm:text-lg shadow-lg w-full sm:w-auto">
                     Discover Our Approach
                 </a>
-                <a href="#contact" class="btn-secondary font-semibold py-3 px-8 rounded-lg text-lg shadow-lg w-full sm:w-auto">
+                <a href="#contact" class="btn-secondary font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-lg text-md sm:text-lg shadow-lg w-full sm:w-auto mt-3 sm:mt-0">
                     Partner With Us
                 </a>
             </div>
@@ -224,17 +241,17 @@
     </header>
 
     <main>
-        <section id="problem" class="py-16 md:py-24 bg-light-petrol-tint">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The Endurance Athlete's Unmet Needs</h2>
-                    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        <section id="problem" class="py-12 sm:py-16 md:py-24 bg-light-petrol-tint">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold section-title mb-3 sm:mb-4">The Endurance Athlete's Unmet Needs</h2>
+                    <p class="text-md sm:text-lg text-gray-700 max-w-lg md:max-w-2xl mx-auto">
                         Athletes demand more: effective fuel that doesn't cause distress, transparent ingredients, and sustainable practices. The current market often falls short.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-6 md:p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">The GI Distress Barrier</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">The GI Distress Barrier</h3>
                         <p class="text-gray-600 text-sm mb-2">
                            Up to <strong>90% of endurance athletes</strong> experience gut issues from fuel. Fructose is a key offender.
                         </p>
@@ -242,17 +259,17 @@
                             <canvas id="giDistressChart"></canvas>
                         </div>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <div class="text-5xl text-[#00C9B1] mb-4">🧪</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Formula & Doping Concerns</h3>
-                        <p class="text-gray-600">
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-4xl sm:text-5xl text-[#00C9B1] mb-3 sm:mb-4">🧪</div>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Formula & Doping Concerns</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">
                             Complex, unclear ingredient lists raise concerns. Athletes need assurance of clean, tested formulas to avoid inadvertent doping.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
-                        <div class="text-5xl text-[#00C9B1] mb-4">🗑️</div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">The Packaging Problem</h3>
-                        <p class="text-gray-600">
+                    <div class="bg-white p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="text-4xl sm:text-5xl text-[#00C9B1] mb-3 sm:mb-4">🗑️</div>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">The Packaging Problem</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">
                             Individual sachets create excessive waste. Athletes and the planet need smarter, sustainable packaging solutions that offer better value.
                         </p>
                     </div>
@@ -260,29 +277,29 @@
             </div>
         </section>
 
-        <section id="why-fructose-free" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Why Fructose-Free? The P-Formance Edge</h2>
-                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        <section id="why-fructose-free" class="py-12 sm:py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold section-title mb-3 sm:mb-4">Why Fructose-Free? The P-Formance Edge</h2>
+                    <p class="text-md sm:text-lg text-gray-700 max-w-lg md:max-w-3xl mx-auto">
                         Many athletes struggle with fructose, yet effective alternatives are scarce. P-Formance fills this critical gap.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 items-start">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
                     <div class="bg-light-petrol-tint p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🤕</span>Addressing Fructose Sensitivity</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🤕</span>Addressing Fructose Sensitivity</h3>
                         <p class="text-gray-600 text-sm">
                             A significant number of athletes experience GI distress (bloating, cramps) specifically due to fructose, even in MTC formulas. P-Formance provides a safe haven for these individuals.
                         </p>
                     </div>
                     <div class="bg-light-petrol-tint p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⏱️</span>Optimal for All Training Durations</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⏱️</span>Optimal for All Training Durations</h3>
                         <p class="text-gray-600 text-sm">
                             For shorter training sessions (e.g., under 2-2.5 hours) where maximal CHO uptake via MTC isn't always necessary, fructose can be an unneeded complexity. Our fructose-free fuel offers efficient SGLT1-based energy without it.
                         </p>
                     </div>
                     <div class="bg-light-petrol-tint p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🎯</span>Filling a Market Gap</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🎯</span>Filling a Market Gap</h3>
                         <p class="text-gray-600 text-sm">
                             There's a clear lack of high-performance, scientifically-backed sports nutrition that is explicitly and entirely fructose-free. P-Formance is uniquely positioned to serve this overlooked market.
                         </p>
@@ -291,99 +308,99 @@
             </div>
         </section>
 
-        <section id="science" class="py-16 md:py-24 bg-light-petrol-tint">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
-                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        <section id="science" class="py-12 sm:py-16 md:py-24 bg-light-petrol-tint">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold section-title mb-3 sm:mb-4">Science-Informed Fueling: The P-Formance Rationale</h2>
+                    <p class="text-md sm:text-lg text-gray-700 max-w-lg md:max-w-3xl mx-auto">
                         Our approach is built on a deep understanding of carbohydrate metabolism. Key scientific insights shape our fructose-free strategy:
                     </p>
                 </div>
 
-                <div class="bar-chart-container mb-12"> 
+                <div class="bar-chart-container mb-10 md:mb-12"> 
                     <canvas id="absorptionPathwaysChart"></canvas>
                 </div>
 
-                <div class="mb-12 md:mb-16">
-                    <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">How P-Formance Works: The SGLT1 Pathway for Glucose/Maltodextrin</h3>
+                <div class="mb-10 md:mb-16">
+                    <h3 class="text-xl sm:text-2xl font-semibold text-center text-gray-800 mb-4 sm:mb-6">How P-Formance Works: The SGLT1 Pathway</h3>
                     <div class="flowchart-container">
                         <div class="flowchart-step"><strong>1. Ingestion:</strong> P-Formance fuel (Glucose/Maltodextrin based) is consumed.</div>
                         <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-step"><strong>2. Intestinal Lumen:</strong> Glucose molecules (from direct glucose or broken-down maltodextrin) arrive in the small intestine.</div>
+                        <div class="flowchart-step"><strong>2. Intestinal Lumen:</strong> Glucose molecules arrive in the small intestine.</div>
                         <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-step"><strong>3. SGLT1 Transporter Activation:</strong> Glucose binds to the SGLT1 transporter on intestinal cells. This is an active process, co-transporting sodium.</div>
+                        <div class="flowchart-step"><strong>3. SGLT1 Transporter Activation:</strong> Glucose binds to the SGLT1 transporter on intestinal cells.</div>
                         <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-step"><strong>4. Efficient Absorption:</strong> Glucose is transported into the intestinal cell. SGLT1 has a high capacity (~60-70g/hr).</div>
+                        <div class="flowchart-step"><strong>4. Efficient Absorption:</strong> Glucose transported into intestinal cell (capacity ~60-70g/hr).</div>
                         <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-step"><strong>5. Enters Bloodstream:</strong> Glucose exits the intestinal cell and enters the bloodstream directly.</div>
+                        <div class="flowchart-step"><strong>5. Enters Bloodstream:</strong> Glucose exits intestinal cell into bloodstream.</div>
                         <div class="flowchart-arrow">↓</div>
-                        <div class="flowchart-step"><strong>6. Fuel for Muscles:</strong> Circulating glucose is readily available for uptake by working muscles for energy.</div>
+                        <div class="flowchart-step"><strong>6. Fuel for Muscles:</strong> Glucose readily available for working muscles.</div>
                     </div>
-                    <p class="text-center text-sm text-gray-600 mt-4">P-Formance optimizes this pathway for efficient, gut-friendly energy delivery, completely avoiding the complexities and potential GI issues of fructose absorption via GLUT5.</p>
+                    <p class="text-center text-xs sm:text-sm text-gray-600 mt-4">P-Formance optimizes this pathway for efficient, gut-friendly energy, avoiding fructose/GLUT5 complexities.</p>
                 </div>
 
 
-                <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⚠️</span>Fructose & GI Distress Link</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">⚠️</span>Fructose & GI Distress Link</h3>
                         <p class="text-gray-600 text-sm">
-                            Research confirms that fructose ingested alone, or in non-optimized ratios, is linked to GI distress due to saturation of its GLUT5 transporter, leading to osmotic discomfort. This underpins our fructose-free commitment.
+                            Research confirms fructose's link to GI distress via GLUT5 saturation. This underpins our fructose-free commitment.
                         </p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔗</span>Understanding MTC Strategies</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">🔗</span>Understanding MTC Strategies</h3>
                         <p class="text-gray-600 text-sm">
-                            Multiple Transportable Carbohydrate (MTC) formulas (glucose+fructose) aim to maximize CHO uptake. P-Formance offers a distinct alternative for those preferring to avoid fructose or whose needs align with efficient SGLT1 fueling.
+                            MTC (glucose+fructose) aims to max CHO uptake. P-Formance is a distinct alternative for those preferring fructose-free SGLT1 fueling.
                         </p>
                     </div>
                      <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role for Gut Comfort</h3>
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 flex items-center"><span class="science-icon">💧</span>Maltodextrin's Role for Gut Comfort</h3>
                         <p class="text-gray-600 text-sm">
-                            Maltodextrin's lower sweetness and osmolality (vs. simple sugars) can improve palatability and GI tolerance, aligning with P-Formance's use of optimized maltodextrin/glucose blends for effective SGLT1 absorption and gut comfort.
+                            Maltodextrin's lower sweetness and osmolality aids palatability and GI tolerance, aligning with our optimized blends.
                         </p>
                     </div>
                 </div>
-                 <p class="text-center mt-10 text-gray-700">
-                    By understanding these complexities, P-Formance consciously chooses a <strong class="highlight-cyan">fructose-free path</strong>, aiming to provide the most reliable, gut-friendly, and effective fuel for a significant segment of the athletic population.
+                 <p class="text-center mt-8 sm:mt-10 text-md sm:text-lg text-gray-700">
+                    By understanding these complexities, P-Formance consciously chooses a <strong class="highlight-cyan">fructose-free path</strong>.
                 </p>
             </div>
         </section>
 
 
-        <section id="pillars" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">P-Formance: Our Core Pillars for a New Era</h2>
-                <p class="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
+        <section id="pillars" class="py-12 sm:py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold section-title mb-4 sm:mb-6">P-Formance: Our Core Pillars for a New Era</h2>
+                <p class="text-md sm:text-xl text-gray-700 mb-10 sm:mb-12 max-w-lg md:max-w-3xl mx-auto">
                     We're not just another fuel. P-Formance is built on three foundational commitments to athletes and our world.
                 </p>
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <div class="bg-light-petrol-tint rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                         <img src="images/athlete1.png" alt="Athlete focused on performance and gut comfort" class="pillar-image">
-                        <div class="p-6">
+                        <div class="p-4 sm:p-6">
                             <div class="pillar-icon">🛡️</div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Gut-Focused Fuel (Fructose-Free)</h3>
-                            <p class="text-gray-600">
-                                Our cornerstone: <strong>Complete Fructose Avoidance.</strong> We eliminate a primary GI trigger by optimizing glucose/maltodextrin science for efficient SGLT1 pathway absorption.
+                            <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">1. Gut-Focused Fuel (Fructose-Free)</h3>
+                            <p class="text-gray-600 text-sm sm:text-base">
+                                Our cornerstone: <strong>Complete Fructose Avoidance.</strong> Optimizing glucose/maltodextrin science for efficient SGLT1 pathway absorption.
                             </p>
                         </div>
                     </div>
                     <div class="bg-light-petrol-tint rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                         <img src="images/lab1.png" alt="Clean lab setting representing tested formulas" class="pillar-image">
-                         <div class="p-6">
+                         <div class="p-4 sm:p-6">
                             <div class="pillar-icon">🔍</div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Transparent & Tested Formulas</h3>
-                            <p class="text-gray-600">
-                                Simple, minimal, high-quality ingredients. We provide <strong>clear insights</strong> into what you consume, with rigorously tested batches to ensure purity, efficacy, and <strong>avoid doping risks.</strong>
+                            <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">2. Transparent & Tested Formulas</h3>
+                            <p class="text-gray-600 text-sm sm:text-base">
+                                Simple, minimal, high-quality ingredients. <strong>Clear insights</strong> and rigorously tested batches to ensure purity and <strong>avoid doping risks.</strong>
                             </p>
                         </div>
                     </div>
                     <div class="bg-light-petrol-tint rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                         <img src="images/bottle-filled.png" alt="Sustainable packaging concept with refillable flask" class="pillar-image">
-                        <div class="p-6">
+                        <div class="p-4 sm:p-6">
                             <div class="pillar-icon">♻️</div>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Sustainable & Smart Packaging</h3>
-                            <p class="text-gray-600">
-                                Moving beyond wasteful single-use sachets. We plan to offer powders for drinks and <strong>bulk gels for refillable soft flasks</strong>, reducing trash and offering better value.
+                            <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">3. Sustainable & Smart Packaging</h3>
+                            <p class="text-gray-600 text-sm sm:text-base">
+                                Offering powders and <strong>bulk gels for refillable soft flasks</strong>, reducing trash and offering better value than single-use sachets.
                             </p>
                         </div>
                     </div>
@@ -391,73 +408,73 @@
             </div>
         </section>
 
-        <section id="fueling-system" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The P-Formance Fueling System: Your Performance, Your Way</h2>
-                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">
-                        Our upcoming product line is a cohesive, fructose-free system. All formulas are neutral, allowing athletes to tailor them with their preferred natural flavors or electrolytes.
+        <section id="fueling-system" class="py-12 sm:py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold section-title mb-3 sm:mb-4">The P-Formance Fueling System</h2>
+                    <p class="text-md sm:text-lg text-gray-700 max-w-lg md:max-w-3xl mx-auto">
+                        Our upcoming product line: a cohesive, fructose-free system. Neutral formulas allow athletes to tailor them with preferred flavors or electrolytes.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
                     <div class="fueling-system-diagram">
                         <div class="fueling-phase">
-                            <h4 class="fueling-phase-title">PRE-EVENT: CARB LOAD</h4>
-                            <div class="product-item">
+                            <h4 class="fueling-phase-title text-sm sm:text-base">PRE-EVENT: CARB LOAD</h4>
+                            <div class="product-item text-xs sm:text-sm">
                                 <span class="product-item-icon">🚀</span>
                                 <strong>Carb Loading Mix:</strong> Maximize glycogen stores.
                             </div>
                         </div>
-                        <div class="text-center flowchart-arrow my-2">↓</div>
+                        <div class="text-center flowchart-arrow my-1 sm:my-2">↓</div>
                         <div class="fueling-phase">
-                            <h4 class="fueling-phase-title">DURING ACTIVITY</h4>
-                            <div class="product-item">
+                            <h4 class="fueling-phase-title text-sm sm:text-base">DURING ACTIVITY</h4>
+                            <div class="product-item text-xs sm:text-sm">
                                 <span class="product-item-icon">💧</span>
                                 <strong>Performance Drink Mix:</strong> Sustained energy (cycling, swimming).
                             </div>
-                            <div class="product-item">
+                            <div class="product-item text-xs sm:text-sm">
                                 <span class="product-item-icon">🏃</span>
                                 <strong>Energy Gel (for Soft Flasks):</strong> Quick, portable energy (running).
                             </div>
                         </div>
-                        <div class="text-center flowchart-arrow my-2">↓</div>
+                        <div class="text-center flowchart-arrow my-1 sm:my-2">↓</div>
                         <div class="fueling-phase">
-                            <h4 class="fueling-phase-title">POST-WORKOUT: RECOVERY</h4>
-                            <div class="product-item">
+                            <h4 class="fueling-phase-title text-sm sm:text-base">POST-WORKOUT: RECOVERY</h4>
+                            <div class="product-item text-xs sm:text-sm">
                                 <span class="product-item-icon">💪</span>
                                 <strong>Recovery Mix:</strong> CHO + Vegan Protein for optimal repair.
                             </div>
                         </div>
                     </div>
-                    <div class="mt-8 md:mt-0">
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">System Benefits:</h3>
-                        <div class="space-y-4">
+                    <div class="mt-6 md:mt-0">
+                        <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 sm:mb-6">System Benefits:</h3>
+                        <div class="space-y-3 sm:space-y-4">
                             <div class="benefit-item">
                                 <span class="benefit-icon">🛡️</span>
                                 <div>
-                                    <h5 class="font-semibold">Fructose-Free Confidence</h5>
-                                    <p class="text-gray-600 text-sm">Eliminate a key source of GI distress for smoother fueling.</p>
+                                    <h5 class="font-semibold text-md sm:text-lg">Fructose-Free Confidence</h5>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Eliminate a key source of GI distress for smoother fueling.</p>
                                 </div>
                             </div>
                             <div class="benefit-item">
                                 <span class="benefit-icon">🎨</span>
                                 <div>
-                                    <h5 class="font-semibold">Customizable & Adaptable</h5>
-                                    <p class="text-gray-600 text-sm">Neutral formulas allow you to add your own preferred flavors or electrolytes, tailoring to your exact needs.</p>
+                                    <h5 class="font-semibold text-md sm:text-lg">Customizable & Adaptable</h5>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Neutral formulas allow you to add your own preferred flavors or electrolytes.</p>
                                 </div>
                             </div>
                             <div class="benefit-item">
                                 <span class="benefit-icon">🔄</span>
                                 <div>
-                                    <h5 class="font-semibold">Comprehensive Fueling</h5>
-                                    <p class="text-gray-600 text-sm">A complete system covering all phases: carb-loading, in-activity energy, and post-workout recovery.</p>
+                                    <h5 class="font-semibold text-md sm:text-lg">Comprehensive Fueling</h5>
+                                    <p class="text-gray-600 text-xs sm:text-sm">A complete system covering carb-loading, in-activity energy, and post-workout recovery.</p>
                                 </div>
                             </div>
                             <div class="benefit-item">
                                 <span class="benefit-icon">🌍</span>
                                 <div>
-                                    <h5 class="font-semibold">Sustainable Approach</h5>
-                                    <p class="text-gray-600 text-sm">Bulk options and refillable flask compatibility reduce waste and offer better value.</p>
+                                    <h5 class="font-semibold text-md sm:text-lg">Sustainable Approach</h5>
+                                    <p class="text-gray-600 text-xs sm:text-sm">Bulk options and refillable flask compatibility reduce waste.</p>
                                 </div>
                             </div>
                         </div>
@@ -466,45 +483,45 @@
             </div>
         </section>
 
-        <section id="advantage" class="py-16 md:py-24 bg-dark-petrol text-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12 md:mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The P-Formance Advantage: Fueling the Future</h2>
-                    <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+        <section id="advantage" class="py-12 sm:py-16 md:py-24 bg-dark-petrol text-white">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10 md:mb-16">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">The P-Formance Advantage</h2>
+                    <p class="text-md sm:text-lg text-gray-300 max-w-lg md:max-w-2xl mx-auto">
                         Our pillars translate into a unique market position and benefits for athletes and investors. See the potential impact:
                     </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
                     <div class="relative performance-chart-container">
                         <canvas id="performanceOverTimeChart"></canvas> 
                     </div>
-                    <div class="space-y-6">
+                    <div class="space-y-4 md:space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 advantage-icon-bullet">1</div>
                             <div>
-                                <h4 class="text-xl font-semibold">Market Disruption with Fructose-Free</h4>
-                                <p class="text-gray-400">Catering to a significant, underserved athlete segment seeking high-performance fuel without fructose-related GI issues.</p>
+                                <h4 class="text-lg sm:text-xl font-semibold">Market Disruption with Fructose-Free</h4>
+                                <p class="text-gray-400 text-sm sm:text-base">Catering to a significant, underserved athlete segment.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                              <div class="flex-shrink-0 advantage-icon-bullet">2</div>
                             <div>
-                                <h4 class="text-xl font-semibold">Enhanced Athlete Trust & Safety</h4>
-                                <p class="text-gray-400">Clean, simple, rigorously tested formulas provide peace of mind and clear insights, mitigating doping concerns.</p>
+                                <h4 class="text-lg sm:text-xl font-semibold">Enhanced Athlete Trust & Safety</h4>
+                                <p class="text-gray-400 text-sm sm:text-base">Clean, simple, tested formulas mitigate doping concerns.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 advantage-icon-bullet">3</div>
                             <div>
-                                <h4 class="text-xl font-semibold">Leadership in Sustainable Sports Nutrition</h4>
-                                <p class="text-gray-400">Innovative packaging solutions reduce environmental impact and offer cost-effective, practical options for athletes.</p>
+                                <h4 class="text-lg sm:text-xl font-semibold">Leadership in Sustainable Nutrition</h4>
+                                <p class="text-gray-400 text-sm sm:text-base">Innovative packaging reduces impact and offers value.</p>
                             </div>
                         </div>
                          <div class="flex items-start">
                             <div class="flex-shrink-0 advantage-icon-bullet">📈</div>
                             <div>
-                                <h4 class="text-xl font-semibold">Strong Growth & Investment Potential</h4>
-                                <p class="text-gray-400">Addressing key market trends: health-conscious fueling, transparency, and sustainability in a rapidly growing sports nutrition sector.</p>
+                                <h4 class="text-lg sm:text-xl font-semibold">Strong Growth & Investment Potential</h4>
+                                <p class="text-gray-400 text-sm sm:text-base">Addressing key market trends: health, transparency, sustainability.</p>
                             </div>
                         </div>
                     </div>
@@ -512,31 +529,31 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-light-petrol-tint">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold section-title mb-6">Join the P-Formance Movement</h2>
-                <p class="text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
-                    Be part of the next wave in sports nutrition. Whether you're an athlete, coach, or investor, let's build a healthier, higher-performing future.
+        <section id="contact" class="py-12 sm:py-16 md:py-24 bg-light-petrol-tint">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold section-title mb-4 sm:mb-6">Join the P-Formance Movement</h2>
+                <p class="text-md sm:text-xl text-gray-700 mb-8 sm:mb-10 max-w-lg md:max-w-2xl mx-auto">
+                    Be part of the next wave in sports nutrition. Athlete, coach, or investor - let's build a healthier, higher-performing future.
                 </p>
-                <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-xl">
+                <div class="max-w-md mx-auto bg-white p-6 sm:p-8 rounded-xl shadow-xl">
                     <p class="text-gray-800 font-semibold text-lg mb-2">Stay Updated on Our Launch!</p>
-                    <p class="text-gray-600 mb-6 text-sm">Get exclusive news, product sneak peeks, and early access opportunities.</p>
-                    <form action="#" method="POST" class="flex flex-col sm:flex-row gap-4">
+                    <p class="text-gray-600 mb-6 text-sm">Get exclusive news, product sneak peeks, and early access.</p>
+                    <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3 sm:gap-4">
                         <input type="email" name="email" placeholder="Enter your email" required
-                               class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#00C9B1] focus:border-transparent outline-none shadow-sm">
-                        <button type="submit" class="btn-primary font-semibold py-3 px-6 rounded-lg text-lg shadow-md">
+                               class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#00C9B1] focus:border-transparent outline-none shadow-sm text-sm sm:text-base">
+                        <button type="submit" class="btn-primary font-semibold py-3 px-4 sm:px-6 rounded-lg text-md sm:text-lg shadow-md">
                             Notify Me
                         </button>
                     </form>
                     <p class="text-xs text-gray-500 mt-4">We respect your privacy. Unsubscribe anytime.</p>
                 </div>
 
-                <div class="mt-16 pt-10 border-t border-gray-300 max-w-xl mx-auto">
-                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Partner with P-Formance</h3>
-                     <p class="text-gray-700 mb-6">
-                        We are actively seeking strategic partners and early-stage investors who share our vision for revolutionizing sports nutrition. If you're interested in helping us build a game-changing brand, we'd love to hear from you.
+                <div class="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-gray-300 max-w-lg md:max-w-xl mx-auto">
+                     <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Partner with P-Formance</h3>
+                     <p class="text-gray-700 mb-6 text-sm sm:text-base">
+                        We are actively seeking strategic partners and early-stage investors who share our vision. If you're interested in helping us build a game-changing brand, we'd love to hear from you.
                      </p>
-                     <a href="mailto:invest@pformance.com?subject=Partnership/Investment Inquiry - P-Formance" class="btn-primary font-semibold py-3 px-8 rounded-lg text-lg shadow-lg">
+                     <a href="mailto:invest@pformance.com?subject=Partnership/Investment Inquiry - P-Formance" class="btn-primary font-semibold py-3 px-6 sm:px-8 rounded-lg text-md sm:text-lg shadow-lg">
                         Contact Investor Relations
                      </a>
                 </div>
@@ -544,17 +561,26 @@
         </section>
     </main>
 
-    <footer class="bg-[#005F60] text-gray-300 py-12">
-        <div class="container mx-auto px-6 text-center">
-            <a href="#" class="text-2xl font-bold text-[#00C9B1] mb-4 inline-block">P-Formance</a>
-            <p class="mb-2">Fuel Clean. Perform Strong. Sustainably.</p>
-            <p class="text-sm">&copy; <span id="currentYear"></span> P-Formance. All Rights Reserved. Innovating for Athletes & Our Planet.</p>
+    <footer class="bg-[#005F60] text-gray-300 py-10 sm:py-12">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <a href="#" class="text-xl sm:text-2xl font-bold text-[#00C9B1] mb-3 sm:mb-4 inline-block">P-Formance</a>
+            <p class="mb-2 text-sm sm:text-base">Fuel Clean. Perform Strong. Sustainably.</p>
+            <p class="text-xs sm:text-sm">&copy; <span id="currentYear"></span> P-Formance. All Rights Reserved. Innovating for Athletes & Our Planet.</p>
              <p class="text-xs mt-2">P-Formance is currently in the conceptual and early development phase. Information presented is based on scientific literature and future aspirations.</p>
         </div>
     </footer>
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
 
         const electricCyan = '#00C9B1';
         const carbonText = '#212121';
@@ -596,7 +622,7 @@
             legend: {
                 display: true,
                 position: 'top',
-                labels: { color: carbonText, font: { size: 12 } }
+                labels: { color: carbonText, font: { size: 10 } } // Smaller legend for mobile
             },
             tooltip: {
                 callbacks: { title: tooltipTitleCallback },
@@ -609,8 +635,8 @@
             title: {
                 display: true,
                 color: carbonText,
-                font: { size: 16, weight: 'bold' },
-                padding: { top: 10, bottom: 20 }
+                font: { size: 14, weight: 'bold' }, // Smaller title for mobile
+                padding: { top: 8, bottom: 16 }
             }
         };
         
@@ -618,7 +644,7 @@
             legend: {
                 display: true,
                 position: 'top',
-                labels: { color: pureWhite, font: { size: 12 } } 
+                labels: { color: pureWhite, font: { size: 10 } } 
             },
             tooltip: {
                 callbacks: { title: tooltipTitleCallback },
@@ -631,8 +657,8 @@
             title: {
                 display: true,
                 color: pureWhite, 
-                font: { size: 16, weight: 'bold' },
-                padding: { top: 10, bottom: 20 }
+                font: { size: 14, weight: 'bold' },
+                padding: { top: 8, bottom: 16 }
             }
         };
 
@@ -643,13 +669,13 @@
                 title: {
                     display: true,
                     color: carbonText,
-                    font: { size: 12 }
+                    font: { size: 10 } // Smaller axis title
                 },
-                ticks: { color: carbonText, font: { size: 10 } },
+                ticks: { color: carbonText, font: { size: 9 } }, // Smaller ticks
                 grid: { color: chartGridGrey }
             },
             x: {
-                ticks: { color: carbonText, font: { size: 10 } },
+                ticks: { color: carbonText, font: { size: 9 } }, // Smaller ticks
                 grid: { display: false }
             }
         };
@@ -679,9 +705,9 @@
                             position: 'bottom',
                             labels: {
                                 color: carbonText,
-                                font: { size: 10 },
-                                boxWidth: 15,
-                                padding: 10
+                                font: { size: 9 }, // Smaller legend
+                                boxWidth: 12,
+                                padding: 8
                             }
                         },
                         tooltip: {
@@ -703,7 +729,7 @@
             new Chart(absorptionCtx, {
                 type: 'bar',
                 data: {
-                    labels: [wrapChartLabel('SGLT1 (Glucose/Maltodextrin)', 20), wrapChartLabel('GLUT5 (Fructose - alone)', 20)],
+                    labels: [wrapChartLabel('SGLT1 (Glucose/Maltodextrin)', 15), wrapChartLabel('GLUT5 (Fructose - alone)', 15)], // Shorter wrap for mobile
                     datasets: [{
                         label: 'Max Absorption Rate (g/hour)',
                         data: [65, 30], 
@@ -717,8 +743,8 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { ...commonChartPluginOptions, title: {...commonChartPluginOptions.title, text: 'Carbohydrate Absorption Pathway Capacities'} },
-                    scales: { ...commonChartScaleOptions, y: {...commonChartScaleOptions.y, title: {...commonChartScaleOptions.y.title, text: 'Absorption Rate (g/hour)'}}}
+                    plugins: { ...commonChartPluginOptions, title: {...commonChartPluginOptions.title, text: 'CHO Absorption Capacities'} }, // Shorter title
+                    scales: { ...commonChartScaleOptions, y: {...commonChartScaleOptions.y, title: {...commonChartScaleOptions.y.title, text: 'Absorption (g/hr)'}}} // Shorter axis title
                 }
             });
         }
@@ -728,26 +754,26 @@
             new Chart(performanceTimeCtx, {
                 type: 'line',
                 data: {
-                    labels: ['Start', '30 min', '1 hr', '1.5 hr', '2 hr', '2.5 hr', 'Finish (3hr~)'],
+                    labels: ['Start', '1hr', '2hr', 'End (3hr~)'], // Simplified labels for mobile
                     datasets: [
                         {
-                            label: 'With P-Formance Fuel',
-                            data: [100, 98, 95, 92, 88, 85, 80], 
+                            label: 'With P-Formance', // Shorter label
+                            data: [100, 95, 88, 80], 
                             borderColor: electricCyan,
                             backgroundColor: 'rgba(0, 201, 177, 0.1)', 
                             tension: 0.1,
                             fill: true,
-                            pointRadius: 4,
+                            pointRadius: 3, // Smaller points
                             pointBackgroundColor: electricCyan
                         },
                         {
-                            label: 'Without Fueling',
-                            data: [100, 90, 75, 60, 45, 30, 20], 
+                            label: 'Without Fuel', // Shorter label
+                            data: [100, 75, 45, 20], 
                             borderColor: mediumGrey,
                             backgroundColor: 'rgba(117, 117, 117, 0.1)', 
                             tension: 0.1,
                             fill: true,
-                            pointRadius: 4,
+                            pointRadius: 3, // Smaller points
                             pointBackgroundColor: mediumGrey
                         }
                     ]
@@ -757,7 +783,7 @@
                     maintainAspectRatio: false,
                     plugins: {
                         ...darkBgChartPluginOptions, 
-                         title: {...darkBgChartPluginOptions.title, text: 'Performance Over Race Duration (Illustrative)'},
+                         title: {...darkBgChartPluginOptions.title, text: 'Performance Over Time (Illustrative)'}, // Slightly shorter
                          legend: { ...darkBgChartPluginOptions.legend, position: 'bottom'}
                     },
                     scales: {
@@ -767,11 +793,11 @@
                             max: 110, 
                             title: {
                                 display: true,
-                                text: 'Performance Level (Arbitrary Units)',
+                                text: 'Performance Level (AU)', // Shorter
                                 color: pureWhite, 
-                                font: { size: 12 }
+                                font: { size: 10 }
                             },
-                            ticks: { color: pureWhite, font: {size: 10} }, 
+                            ticks: { color: pureWhite, font: {size: 9} }, 
                             grid: { color: 'rgba(255,255,255,0.2)' } 
                         },
                         x: { 
@@ -779,9 +805,9 @@
                                 display: true,
                                 text: 'Race Duration',
                                 color: pureWhite,
-                                font: {size: 12}
+                                font: {size: 10}
                             },
-                            ticks: { color: pureWhite, font: {size: 10} }, 
+                            ticks: { color: pureWhite, font: {size: 9} }, 
                             grid: { color: 'rgba(255,255,255,0.1)' } 
                         }
                     }
